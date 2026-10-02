@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#fbf9f5" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-bright": "#fbf9f5", "primary": "#000000", "background": "#fbf9f5", "primary-fixed": "#e5e2e1", "on-background": "#1b1c1a", "on-primary-fixed-variant": "#474646", "on-tertiary-container": "#85847f", "surface-variant": "#e4e2de", "surface-container-low": "#f5f3ef", "on-secondary-fixed-variant": "#4a473d", "primary-fixed-dim": "#c8c6c5", "on-tertiary": "#ffffff", "surface-container-high": "#eae8e4", "inverse-surface": "#30312e", "on-secondary-fixed": "#1e1c13", "inverse-on-surface": "#f2f0ed", "on-primary-fixed": "#1c1b1b", "on-error": "#ffffff", "on-primary": "#ffffff", "on-secondary-container": "#666258", "on-tertiary-fixed-variant": "#474743", "tertiary-container": "#1c1c18", "secondary-fixed-dim": "#ccc6b9", "surface": "#fbf9f5", "secondary": "#625e54", "outline-variant": "#c4c7c7", "on-tertiary-fixed": "#1c1c18", "on-surface-variant": "#444748", "secondary-fixed": "#e8e2d5", "on-primary-container": "#858383", "surface-dim": "#dbdad6", "error-container": "#ffdad6", "error": "#ba1a1a", "inverse-primary": "#c8c6c5", "tertiary-fixed": "#e5e2dc", "tertiary-fixed-dim": "#c9c6c1", "on-surface": "#1b1c1a", "secondary-container": "#e5dfd2", "on-secondary": "#ffffff", "tertiary": "#000000", "surface-tint": "#5f5e5e", "primary-container": "#1c1b1b", "surface-container": "#efeeea", "surface-container-highest": "#e4e2de", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "outline": "#747878" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1.25rem", "space-lg": "3rem", "space-xl": "6rem", "gutter": "2rem", "space-xs": "0.5rem", "margin": "4rem", "space-sm": "1rem", "margin-tablet": "2rem", "gutter-tablet": "1.5rem", "space-md": "1.5rem", "gutter-mobile": "1rem" }, fontFamily: { "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "subhead-editorial": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "button-text": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "headline-md-mobile": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "label-uppercase": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.375rem", "letterSpacing": "0.015em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "subhead-editorial": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" }], "button-text": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "500" }], "display-hero": ["5rem", { "lineHeight": "5.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-md-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero-mobile": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-uppercase": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.18em", "fontWeight": "600" }] } } } }</script>
+    <script src="site.js"></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest">
+        <div class="h-20 w-full px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between">
+            <div class="flex items-center gap-space-sm"><a
+                    class="flex items-center gap-3 font-headline-sm text-headline-sm tracking-tight text-primary uppercase"
+                    data-path="beranda" href="beranda.html"><img src="foto/logo-nav.png" alt="Logo ETIESTA"
+                        class="h-9 w-9 object-contain" width="36" height="36">ETIESTA</a></div>
+            <nav class="hidden md:flex items-center gap-space-lg"
+                data-active-classes="text-primary font-medium border-b border-primary pb-0.5"><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="beranda" href="beranda.html">Beranda</a><a aria-current="page"
+                    class="font-button-text text-button-text uppercase transition-colors text-primary font-medium border-b border-primary pb-0.5"
+                    data-path="lemari-retail" href="lemariretil.html">Lemari Retail</a><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="lemari-b2b" href="lemarib2b.html">Lemari B2B</a><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="tentang" href="tentangkami.html">Tentang</a></nav>
+            <div class="flex items-center gap-space-md"><a
+                    class="font-button-text text-button-text uppercase text-on-surface hover:text-primary transition-colors flex items-center gap-1.5 py-1 px-2 border border-surface-variant hover:border-primary"
+                    data-path="keranjang" href="tasbelanja.html"><span
+                        class="material-symbols-outlined text-[16px]">shopping_bag</span><span data-bag-count>Bag
+                        (0)</span></a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-5rem)]">
+        <div class="flex flex-col w-full">
+            <!-- Editorial Page Title & Header Bar -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pt-8 pb-10">
+                <div class="flex flex-col gap-6">
+                    <!-- Breadcrumb -->
+                    <nav
+                        class="flex items-center gap-2 text-on-surface-variant font-label-uppercase text-label-uppercase tracking-widest">
+                        <a class="hover:text-primary transition-colors" data-path="beranda"
+                            href="beranda.html">Beranda</a>
+                        <span>/</span>
+                        <span class="text-primary font-medium">Lemari Retail</span>
+                    </nav>
+                    <!-- Main Editorial Title Block -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end justify-between">
+                        <div class="lg:col-span-8 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-[1px] bg-primary"></span>
+                                <span
+                                    class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-widest">Katalog
+                                    Siap Pakai</span>
+                            </div>
+                            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Lemari Retail</h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                                Temukan koleksi fashion ETIESTA untuk kebutuhan sehari-hari — siluet modern, material
+                                premium, dan kenyamanan esensial yang dirancang melampaui musim.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-end gap-3">
+                            <div
+                                class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-none text-on-surface font-body-sm text-body-sm">
+                                <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                <span>Menampilkan <strong>6</strong> Koleksi Pilihan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filter Controls & Utility Strip -->
+                    <div
+                        class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-6 border-b border-surface-container-highest">
+                        <!-- Quick Tab Filters -->
+                        <div class="flex items-center gap-2 overflow-x-auto pb-3 sm:pb-0 scrollbar-none"
+                            id="quick-categories">
+                            <button
+                                class="cat-pill active px-4 py-2 font-label-uppercase text-label-uppercase bg-primary text-on-primary uppercase transition-all duration-200"
+                                data-cat="all">Semua</button>
+                            <button
+                                class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
+                                data-cat="atasan">Atasan</button>
+                            <button
+                                class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
+                                data-cat="bawahan">Bawahan</button>
+                            <button
+                                class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
+                                data-cat="outer">Outer</button>
+                            <button
+                                class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
+                                data-cat="dress">Dress</button>
+                        </div>
+                        <!-- Sorting Menu -->
+                        <div class="flex items-center gap-3 pb-3 sm:pb-0">
+                            <label
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-widest hidden md:inline"
+                                for="sort-select">Urutan:</label>
+                            <div class="relative inline-block w-full sm:w-auto">
+                                <select
+                                    class="appearance-none bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase px-4 py-2 pr-8 border border-transparent focus:border-primary focus:outline-none cursor-pointer w-full"
+                                    id="sort-select">
+                                    <option value="featured">Koleksi Terbaru</option>
+                                    <option value="price-asc">Harga Terendah</option>
+                                    <option value="price-desc">Harga Tertinggi</option>
+                                    <option value="popular">Paling Populer</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-on-surface">expand_more</span>
+                            </div>
+                            <button
+                                class="lg:hidden flex items-center gap-1 px-3 py-2 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase"
+                                id="toggle-mobile-filter">
+                                <span class="material-symbols-outlined text-[16px]">tune</span>
+                                <span>Filter</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Body: 2-Column Catalog Framework -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pb-space-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <!-- Left Column: Sticky Sidebar Filter -->
+                    <aside
+                        class="lg:col-span-3 hidden lg:block sticky top-28 space-y-8 bg-surface-container-lowest p-6 lg:p-7 border border-surface-container-highest shadow-sm"
+                        id="sidebar-filter">
+                        <div class="flex items-center justify-between border-b border-surface-container-highest pb-4">
+                            <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Filter
+                                Arsip</span>
+                            <button
+                                class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4 uppercase"
+                                id="reset-filters">
+                                Reset
+                            </button>
+                        </div>
+                        <!-- Search Bar -->
+                        <div class="space-y-2">
+                            <label
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider block">Pencarian</label>
+                            <div class="relative">
+                                <input
+                                    class="w-full bg-surface py-2.5 pl-3 pr-9 font-body-sm text-body-sm text-on-surface border border-surface-variant focus:border-primary focus:outline-none transition-colors"
+                                    id="filter-search" placeholder="Cari nama, bahan, siluet..." type="text" />
+                                <span
+                                    class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+                            </div>
+                        </div>
+                        <!-- Category Accordion/List -->
+                        <div class="space-y-3">
+                            <span
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider block">Kategori</span>
+                            <div class="flex flex-col space-y-2 font-body-sm text-body-sm">
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input checked="" class="accent-primary w-4 h-4 cursor-pointer"
+                                            name="cat_filter" type="radio" value="all" />
+                                        Semua Koleksi
+                                    </span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">12</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input class="accent-primary w-4 h-4 cursor-pointer" name="cat_filter"
+                                            type="radio" value="atasan" />
+                                        Atasan
+                                    </span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">4</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input class="accent-primary w-4 h-4 cursor-pointer" name="cat_filter"
+                                            type="radio" value="bawahan" />
+                                        Bawahan
+                                    </span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">3</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input class="accent-primary w-4 h-4 cursor-pointer" name="cat_filter"
+                                            type="radio" value="outer" />
+                                        Outer
+                                    </span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">3</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input class="accent-primary w-4 h-4 cursor-pointer" name="cat_filter"
+                                            type="radio" value="dress" />
+                                        Dress
+                                    </span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">2</span>
+                                </label>
+                                <label
+                                    class="flex items-center justify-between cursor-not-allowed group py-1 opacity-50">
+                                    <span class="flex items-center gap-2.5 text-on-surface">
+                                        <input class="accent-primary w-4 h-4" disabled="" name="cat_filter" type="radio"
+                                            value="accessories" />
+                                        Aksesori
+                                    </span>
+                                    <span class="font-label-uppercase text-[11px]">0</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Size Pills -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider">Ukuran</span>
+                                <span class="font-body-sm text-[11px] text-on-surface-variant">Standar Indonesia</span>
+                            </div>
+                            <div class="grid grid-cols-5 gap-1.5" id="size-selector-group">
+                                <button
+                                    class="size-filter-btn py-2 text-center border border-surface-variant font-label-uppercase text-label-uppercase hover:border-primary transition-all"
+                                    data-size="S" type="button">S</button>
+                                <button
+                                    class="size-filter-btn py-2 text-center border border-surface-variant font-label-uppercase text-label-uppercase hover:border-primary transition-all"
+                                    data-size="M" type="button">M</button>
+                                <button
+                                    class="size-filter-btn py-2 text-center border border-surface-variant font-label-uppercase text-label-uppercase hover:border-primary transition-all"
+                                    data-size="L" type="button">L</button>
+                                <button
+                                    class="size-filter-btn py-2 text-center border border-surface-variant font-label-uppercase text-label-uppercase hover:border-primary transition-all"
+                                    data-size="XL" type="button">XL</button>
+                                <button
+                                    class="size-filter-btn py-2 text-center border border-surface-variant font-label-uppercase text-label-uppercase hover:border-primary transition-all"
+                                    data-size="XXL" type="button">XXL</button>
+                            </div>
+                        </div>
+                        <!-- Price Range -->
+                        <div class="space-y-3">
+                            <span
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider block">Rentang
+                                Investasi</span>
+                            <div class="space-y-2 font-body-sm text-body-sm">
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input checked="" class="accent-primary w-4 h-4 cursor-pointer" name="price_range"
+                                        type="radio" value="all" />
+                                    <span>Semua Harga</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 cursor-pointer" name="price_range" type="radio"
+                                        value="under-150" />
+                                    <span>&lt; Rp 150.000</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 cursor-pointer" name="price_range" type="radio"
+                                        value="150-250" />
+                                    <span>Rp 150.000 - Rp 250.000</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 cursor-pointer" name="price_range" type="radio"
+                                        value="above-250" />
+                                    <span>&gt; Rp 250.000</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Material Specification Filter -->
+                        <div class="space-y-3">
+                            <span
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider block">Karakter
+                                Bahan</span>
+                            <div class="space-y-2 font-body-sm text-body-sm">
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 rounded-none cursor-pointer" type="checkbox" />
+                                    <span>Linen &amp; Pure Cotton</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 rounded-none cursor-pointer" type="checkbox" />
+                                    <span>Crisp Poplin Weave</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input class="accent-primary w-4 h-4 rounded-none cursor-pointer" type="checkbox" />
+                                    <span>Wool-Touch Drape</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- B2B Service Micro-Banner -->
+                        <div class="p-4 bg-surface-container border-l-2 border-primary space-y-2">
+                            <span
+                                class="font-label-uppercase text-[10px] tracking-widest text-primary uppercase font-bold">Kebutuhan
+                                Grosir / Korporat?</span>
+                            <p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">Pesan minimum 50
+                                pcs dengan kustomisasi label &amp; potongan eksklusif.</p>
+                            <a class="inline-flex items-center gap-1 font-label-uppercase text-[11px] text-primary uppercase font-medium hover:underline pt-1"
+                                data-path="lemari-b2b" href="lemarib2b.html">
+                                <span>Buka Portal B2B</span>
+                                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </aside>
+                    <!-- Right Column: Product Catalog Grid -->
+                    <div class="lg:col-span-9 flex flex-col gap-8">
+                        <!-- Active Filter Tags Display Strip -->
+                        <div class="flex flex-wrap items-center gap-2 py-1">
+                            <span
+                                class="font-label-uppercase text-label-uppercase text-on-surface-variant uppercase">Filter
+                                Aktif:</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-on-surface font-body-sm text-[12px]">
+                                <span>Semua Stok Tersedia</span>
+                                <button class="hover:text-primary"><span
+                                        class="material-symbols-outlined text-[14px]">close</span></button>
+                            </span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-on-surface font-body-sm text-[12px]">
+                                <span>Lokasi: Jakarta Studio Ready</span>
+                            </span>
+                        </div>
+                        <!-- Grid Container -->
+                        <div class="grid grid-cols-2 gap-x-3 sm:gap-x-6 gap-y-6 sm:gap-y-12" id="product-grid">
+                            <!-- Product Card 1 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="atasan" data-name="oversized boxy tee" data-price="129000">
+                                <!-- Image Aspect Frame -->
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Oversized Boxy Tee"
+                                        class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-baju5.jpg" />
+                                    <!-- Status Tag -->
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        BESTSELLER
+                                    </span>
+                                    <!-- Stock Indicator -->
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 24 pcs
+                                    </span>
+                                    <!-- Quick Add overlay hover -->
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Oversized Boxy Tee', 129000, 'Cotton Combed 24s', 'M')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Atasan • Kasual Modern</span>
+                                            <span class="text-secondary font-medium">Combed 24s</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Oversized Boxy Tee
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            100% Premium Cotton Combed 24s pre-shrunk dengan siluet jatuh tegas.
+                                        </p>
+                                    </div>
+                                    <!-- Sizes Pills & Action -->
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">XL</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                129.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Oversized%20Boxy%20Tee'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Oversized Boxy Tee', 129000, 'Cotton Combed 24s', 'M')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 2 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="outer" data-name="tailored linen blazer" data-price="289000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Tailored Linen Blazer"
+                                        class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-baju4.jpg" />
+                                    <span
+                                        class="absolute top-3 left-3 bg-secondary text-on-secondary font-label-uppercase text-[10px] tracking-widest px-2.5 py-1 uppercase">
+                                        EDISI KHUSUS
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 18 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Tailored Linen Blazer', 289000, '100% Belgian Linen', 'L')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Outer • Formal Relaks</span>
+                                            <span class="text-secondary font-medium">Belgian Linen</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Tailored Linen Blazer
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Konstruksi bahu unlined yang sejuk dengan draping linen bernapas.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                289.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Tailored%20Linen%20Blazer'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Tailored Linen Blazer', 289000, '100% Belgian Linen', 'L')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 3 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="atasan" data-name="relaxed linen lounge shirt" data-price="179000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        data-alt="Full body studio look of an Indonesian woman with medium bob hair wearing a soft oatmeal beige button-down relaxed linen shirt with matching loose trousers standing against warm travertine wall with warm daylight."
+                                        src="foto/p-baju3.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        NEW
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 28 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Relaxed Linen Lounge Shirt', 179000, 'Pure Washed Linen', 'M')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Atasan • Resort Minimalis</span>
+                                            <span class="text-secondary font-medium">Pure Washed Linen</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Relaxed Linen Lounge Shirt
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Kemeja lengan panjang berkerah santai dengan kancing cangkang alami.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">XL</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                179.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Relaxed%20Linen%20Lounge%20Shirt'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Relaxed Linen Lounge Shirt', 179000, 'Pure Washed Linen', 'M')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 4 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="bawahan" data-name="pleated wide-leg trousers" data-price="219000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        data-alt="Chic editorial fashion portrait of a stylish woman wearing high-waisted pleated wide-leg trousers in mocha beige paired with ivory knit top, minimal architectural backdrop with subtle soft shadows."
+                                        src="foto/p-tas6.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        BESTSELLER
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 32 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Pleated Wide-Leg Trousers', 219000, 'Wool-Touch Suiting Poly', 'M')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Bawahan • Suiting Modern</span>
+                                            <span class="text-secondary font-medium">Wool-Touch Poly</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Pleated Wide-Leg Trousers
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Lipit ganda presisi dengan lingkar pinggang fleksibel dan draping mewah.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">XL</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                219.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Pleated%20Wide-Leg%20Trousers'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Pleated Wide-Leg Trousers', 219000, 'Wool-Touch Suiting Poly', 'M')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 5 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="dress" data-name="structured poplin shirt dress" data-price="259000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        data-alt="Full length editorial photo of a beautiful model wearing a crisp ivory structured poplin shirt dress with folded collar and gentle flare waist, natural architectural studio lighting with soft shadows."
+                                        src="foto/p-sample2.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        NEW
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 15 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Structured Poplin Shirt Dress', 259000, 'Crisp Poplin Cotton', 'S')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Dress • Siluet Arsitektural</span>
+                                            <span class="text-secondary font-medium">Crisp Poplin</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Structured Poplin Shirt Dress
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Dress berkerah kemeja dengan struktur katun poplin rapat berdaya tahan
+                                            tinggi.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                259.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Structured%20Poplin%20Shirt%20Dress'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Structured Poplin Shirt Dress', 259000, 'Crisp Poplin Cotton', 'S')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 6 -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="atasan" data-name="minimalist mockneck top" data-price="149000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Minimalist Mockneck Top"
+                                        class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-sample1.jpg" />
+                                    <span
+                                        class="absolute top-3 left-3 bg-secondary text-on-secondary font-label-uppercase text-[10px] tracking-widest px-2.5 py-1 uppercase">
+                                        ESSENTIAL
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 20 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Minimalist Mockneck Top', 149000, 'Ribbed Supima Cotton', 'M')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Atasan • Layering Halus</span>
+                                            <span class="text-secondary font-medium">Ribbed Supima</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Minimalist Mockneck Top
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Kerah semi-tinggi dengan rajutan elastis Supima cotton bernutrisi tinggi.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">S</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">M</span>
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">L</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                149.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <button
+                                                class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                onclick="location.href='detilproduk.html?produk=Minimalist%20Mockneck%20Top'">
+                                                Detail
+                                            </button>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Minimalist Mockneck Top', 149000, 'Ribbed Supima Cotton', 'M')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Editorial Lookbook Banner Section -->
+                        <div
+                            class="w-full bg-primary text-on-primary p-8 lg:p-12 mt-6 flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="space-y-3 max-w-xl">
+                                <span
+                                    class="font-label-uppercase text-label-uppercase text-surface-tint uppercase tracking-widest block">Panduan
+                                    Gaya • Koleksi Esensial</span>
+                                <h2 class="font-headline-md text-headline-md text-on-primary tracking-tight">Kombinasi
+                                    Siluet yang Bersahaja</h2>
+                                <p class="font-body-md text-body-md text-inverse-on-surface leading-relaxed">
+                                    Seluruh garmen dalam Lemari Retail ETIESTA dirancang dengan palet nada serasi
+                                    sehingga dapat dipadupadankan tanpa batas antara atasan kasual dan celana tailored.
+                                </p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                                <a class="px-6 py-3.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-container transition-colors text-center"
+                                    href="https://wa.me/6285885332703?text=Halo%20ETIESTA,%20saya%20ingin%20konsultasi%20panduan%20ukuran%20dan%20rekomendasi%20styling%20Lemari%20Retail."
+                                    target="_blank">
+                                    Konsultasi Styling
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive Slide-over Cart / Shopping Bag Drawer -->
+            <aside
+                class="fixed inset-y-0 right-0 z-50 w-full sm:w-[420px] bg-surface-container-lowest border-l border-surface-container-highest shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col"
+                id="cart-drawer">
+                <!-- Drawer Header -->
+                <div class="p-6 border-b border-surface-container-highest flex items-center justify-between bg-surface">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[22px]">shopping_bag</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Kantong Belanja</h3>
+                        <span class="font-label-uppercase text-[11px] bg-primary text-on-primary px-2 py-0.5"
+                            id="cart-count-badge">0</span>
+                    </div>
+                    <button class="p-1 hover:text-primary transition-colors text-on-surface-variant"
+                        onclick="toggleCartDrawer()">
+                        <span class="material-symbols-outlined text-[24px]">close</span>
+                    </button>
+                </div>
+                <!-- Empty State / Item List -->
+                <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-container">
+                    <!-- Injected dynamically via JS -->
+                    <div class="h-full flex flex-col items-center justify-center text-center py-16 space-y-3"
+                        id="cart-empty-view">
+                        <span class="material-symbols-outlined text-[48px] text-surface-tint">local_mall</span>
+                        <p class="font-subhead-editorial text-subhead-editorial text-primary">Kantong Anda masih kosong
+                        </p>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Pilihlah siluet favorit
+                            Anda dari katalog Lemari Retail untuk memulai pesanan.</p>
+                    </div>
+                </div>
+                <!-- Drawer Footer & WhatsApp Checkout CTA -->
+                <div class="p-6 bg-surface border-t border-surface-container-highest space-y-4">
+                    <div class="space-y-1.5">
+                        <div
+                            class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                            <span>Subtotal Item</span>
+                            <span class="font-semibold text-on-surface" id="cart-subtotal-val">Rp 0</span>
+                        </div>
+                        <div class="flex items-center justify-between font-body-sm text-[12px] text-on-surface-variant">
+                            <span>Pengiriman (JNE / SiCepat)</span>
+                            <span class="text-secondary italic">Dihitung di WhatsApp</span>
+                        </div>
+                        <div
+                            class="flex items-center justify-between font-headline-sm text-headline-sm text-primary pt-2 border-t border-surface-container-highest">
+                            <span>Total</span>
+                            <span id="cart-total-val">Rp 0</span>
+                        </div>
+                    </div>
+                    <!-- WA Checkout Button with Auto-generated message link -->
+                    <a class="w-full py-4 bg-primary text-on-primary font-button-text text-button-text uppercase tracking-widest hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 shadow-md"
+                        href="#" id="wa-checkout-btn" target="_blank">
+                        <span class="material-symbols-outlined text-[18px]">chat</span>
+                        <span>Checkout via WhatsApp</span>
+                    </a>
+                    <p class="font-body-sm text-[11px] text-center text-on-surface-variant">
+                        Admin penjualan ETIESTA siap mengonfirmasi alamat dan ketersediaan langsung.
+                    </p>
+                </div>
+            </aside>
+            <!-- Product Detail Modal -->
+            <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4"
+                id="detail-modal">
+                <div
+                    class="bg-surface-container-lowest max-w-2xl w-full p-6 md:p-8 space-y-6 relative border border-surface-container-highest shadow-2xl">
+                    <button class="absolute top-4 right-4 p-2 text-on-surface-variant hover:text-primary"
+                        onclick="closeProductModal()">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <div class="space-y-2">
+                        <span
+                            class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-widest block">Kurasi
+                            Koleksi</span>
+                        <h3 class="font-headline-md text-headline-md text-primary tracking-tight" id="modal-title">Nama
+                            Produk</h3>
+                        <p class="font-headline-sm text-headline-sm font-semibold text-primary" id="modal-price">Rp 0
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 py-3 border-y border-surface-container-highest">
+                        <div>
+                            <span class="font-label-uppercase text-[11px] text-secondary uppercase block">Spesifikasi
+                                Material</span>
+                            <p class="font-body-md text-body-md text-on-surface font-medium" id="modal-material">Bahan
+                            </p>
+                        </div>
+                        <div>
+                            <span class="font-label-uppercase text-[11px] text-secondary uppercase block">Ketersediaan
+                                Fisik</span>
+                            <p class="font-body-md text-body-md text-on-surface font-medium" id="modal-stock">Tersedia
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <span
+                            class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-wider block">Catatan
+                            Desainer</span>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="modal-desc">
+                            Deskripsi produk...</p>
+                    </div>
+                    <div class="pt-2 flex items-center justify-end gap-3">
+                        <button
+                            class="px-5 py-3 border border-surface-variant font-button-text text-button-text uppercase hover:border-primary"
+                            onclick="closeProductModal()">Tutup</button>
+                        <button
+                            class="px-6 py-3 bg-primary text-on-primary font-button-text text-button-text uppercase hover:bg-neutral-800 flex items-center gap-2"
+                            id="modal-add-btn">
+                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                            <span>Beli Produk Ini</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Micro-interaction JavaScript -->
+            <script>
+                // State
+                const cart = Etiesta.retail().map(i => ({ title: i.name, price: i.price, material: i.material || '', size: i.size, qty: i.qty }));
+                window.addEventListener('DOMContentLoaded', () => renderCart());
+                const waBase = "https://wa.me/6285885332703";
+
+                function toggleCartDrawer() {
+                    const drawer = document.getElementById('cart-drawer');
+                    drawer.classList.toggle('translate-x-full');
+                }
+
+                function addToBag(title, price, material, size) {
+                    const existing = cart.find(item => item.title === title && item.size === size);
+                    if (existing) {
+                        existing.qty += 1;
+                    } else {
+                        cart.push({ title, price, material, size, qty: 1 });
+                    }
+                    renderCart();
+                    const drawer = document.getElementById('cart-drawer');
+                    if (drawer.classList.contains('translate-x-full')) {
+                        drawer.classList.remove('translate-x-full');
+                    }
+                }
+
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    renderCart();
+                }
+
+                function updateCartQty(index, delta) {
+                    if (cart[index]) {
+                        cart[index].qty += delta;
+                        if (cart[index].qty <= 0) {
+                            cart.splice(index, 1);
+                        }
+                    }
+                    renderCart();
+                }
+
+                function formatRupiah(num) {
+                    return 'Rp ' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                }
+
+                function renderCart() {
+                    Etiesta.setRetail(cart.map(i => ({ name: i.title, price: i.price, material: i.material, size: i.size, qty: i.qty })));
+                    const container = document.getElementById('cart-items-container');
+                    const emptyView = document.getElementById('cart-empty-view');
+                    const badge = document.getElementById('cart-count-badge');
+                    const subtotalEl = document.getElementById('cart-subtotal-val');
+                    const totalEl = document.getElementById('cart-total-val');
+                    const waBtn = document.getElementById('wa-checkout-btn');
+
+                    const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+                    badge.textContent = totalItems;
+
+                    if (cart.length === 0) {
+                        container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center py-16 space-y-3">
+            <span class="material-symbols-outlined text-[48px] text-surface-tint">local_mall</span>
+            <p class="font-subhead-editorial text-subhead-editorial text-primary">Kantong Anda masih kosong</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Pilihlah siluet favorit Anda dari katalog Lemari Retail untuk memulai pesanan.</p>
+          </div>
+        `;
+                        subtotalEl.textContent = 'Rp 0';
+                        totalEl.textContent = 'Rp 0';
+                        waBtn.setAttribute('href', '#');
+                        return;
+                    }
+
+                    let subtotal = 0;
+                    let html = '';
+
+                    cart.forEach((item, idx) => {
+                        const itemTotal = item.price * item.qty;
+                        subtotal += itemTotal;
+                        html += `
+          <div class="flex items-start justify-between gap-3 p-3 bg-surface border border-surface-container-highest">
+            <div class="flex-1 space-y-1">
+              <h4 class="font-body-md text-body-md font-semibold text-primary leading-tight">${item.title}</h4>
+              <p class="font-label-uppercase text-[10px] text-on-surface-variant uppercase">${item.material} &bull; Size: ${item.size}</p>
+              <div class="flex items-center gap-3 pt-2">
+                <div class="flex items-center border border-surface-variant bg-surface-bright">
+                  <button onclick="updateCartQty(${idx}, -1)" class="px-2 py-0.5 text-on-surface hover:bg-surface-variant font-bold text-xs">-</button>
+                  <span class="px-2 font-body-sm text-xs font-medium">${item.qty}</span>
+                  <button onclick="updateCartQty(${idx}, 1)" class="px-2 py-0.5 text-on-surface hover:bg-surface-variant font-bold text-xs">+</button>
+                </div>
+                <span class="font-body-sm text-xs font-semibold text-primary">${formatRupiah(itemTotal)}</span>
+              </div>
+            </div>
+            <button onclick="removeFromCart(${idx})" class="text-on-surface-variant hover:text-error p-1">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          </div>
+        `;
+                    });
+
+                    container.innerHTML = html;
+                    subtotalEl.textContent = formatRupiah(subtotal);
+                    totalEl.textContent = formatRupiah(subtotal);
+
+                    // Compose clean deep link message
+                    let message = `Halo ETIESTA, saya ingin melakukan checkout untuk pesanan Lemari Retail:%0A%0A`;
+                    cart.forEach((item, i) => {
+                        message += `${i + 1}. *${item.title}* (${item.size}) x${item.qty} - ${formatRupiah(item.price * item.qty)}%0A`;
+                    });
+                    message += `%0A*Total Pesanan: ${formatRupiah(subtotal)}*%0A%0AMohon konfirmasi biaya pengiriman & ketersediaan stok. Terima kasih!`;
+
+                    waBtn.setAttribute('href', `${waBase}?text=${message}`);
+                }
+
+                // Modal Details Logic
+                function openProductModal(title, price, material, desc, stock) {
+                    document.getElementById('modal-title').textContent = title;
+                    document.getElementById('modal-price').textContent = 'Rp ' + price;
+                    document.getElementById('modal-material').textContent = material;
+                    document.getElementById('modal-desc').textContent = desc;
+                    document.getElementById('modal-stock').textContent = stock;
+
+                    const addBtn = document.getElementById('modal-add-btn');
+                    addBtn.onclick = function () {
+                        const cleanPrice = parseInt(price.replace('.', ''), 10);
+                        addToBag(title, cleanPrice, material, 'M');
+                        closeProductModal();
+                    };
+
+                    const modal = document.getElementById('detail-modal');
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }
+
+                function closeProductModal() {
+                    const modal = document.getElementById('detail-modal');
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+
+                // Filtering & Search
+                document.addEventListener('DOMContentLoaded', () => {
+                    const searchInput = document.getElementById('filter-search');
+                    const catRadios = document.querySelectorAll('input[name="cat_filter"]');
+                    const quickPills = document.querySelectorAll('.cat-pill');
+                    const items = document.querySelectorAll('.product-item');
+                    const sortSelect = document.getElementById('sort-select');
+                    const resetBtn = document.getElementById('reset-filters');
+                    const sizeBtns = document.querySelectorAll('.size-filter-btn');
+
+                    let currentCategory = 'all';
+                    let activeSize = null;
+
+                    function filterProducts() {
+                        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+                        items.forEach(item => {
+                            const itemCat = item.getAttribute('data-category');
+                            const itemName = item.getAttribute('data-name');
+                            const matchCat = (currentCategory === 'all' || itemCat === currentCategory);
+                            const matchSearch = (!query || itemName.includes(query));
+
+                            if (matchCat && matchSearch) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }
+
+                    if (searchInput) {
+                        searchInput.addEventListener('input', filterProducts);
+                    }
+
+                    quickPills.forEach(pill => {
+                        pill.addEventListener('click', () => {
+                            quickPills.forEach(p => p.classList.remove('bg-primary', 'text-on-primary'));
+                            quickPills.forEach(p => p.classList.add('bg-surface-container', 'text-on-surface'));
+                            pill.classList.remove('bg-surface-container', 'text-on-surface');
+                            pill.classList.add('bg-primary', 'text-on-primary');
+
+                            currentCategory = pill.getAttribute('data-cat');
+                            // sync sidebar radio
+                            catRadios.forEach(radio => {
+                                radio.checked = (radio.value === currentCategory);
+                            });
+                            filterProducts();
+                        });
+                    });
+
+                    catRadios.forEach(radio => {
+                        radio.addEventListener('change', () => {
+                            currentCategory = radio.value;
+                            // sync top pills
+                            quickPills.forEach(p => {
+                                if (p.getAttribute('data-cat') === currentCategory) {
+                                    p.classList.remove('bg-surface-container', 'text-on-surface');
+                                    p.classList.add('bg-primary', 'text-on-primary');
+                                } else {
+                                    p.classList.remove('bg-primary', 'text-on-primary');
+                                    p.classList.add('bg-surface-container', 'text-on-surface');
+                                }
+                            });
+                            filterProducts();
+                        });
+                    });
+
+                    sizeBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            if (btn.classList.contains('bg-primary')) {
+                                btn.classList.remove('bg-primary', 'text-on-primary');
+                                activeSize = null;
+                            } else {
+                                sizeBtns.forEach(b => b.classList.remove('bg-primary', 'text-on-primary'));
+                                btn.classList.add('bg-primary', 'text-on-primary');
+                                activeSize = btn.getAttribute('data-size');
+                            }
+                        });
+                    });
+
+                    if (resetBtn) {
+                        resetBtn.addEventListener('click', () => {
+                            if (searchInput) searchInput.value = '';
+                            currentCategory = 'all';
+                            activeSize = null;
+                            sizeBtns.forEach(b => b.classList.remove('bg-primary', 'text-on-primary'));
+                            catRadios.forEach(r => r.checked = (r.value === 'all'));
+                            quickPills.forEach(p => {
+                                if (p.getAttribute('data-cat') === 'all') {
+                                    p.classList.add('bg-primary', 'text-on-primary');
+                                } else {
+                                    p.classList.remove('bg-primary', 'text-on-primary');
+                                }
+                            });
+                            filterProducts();
+                        });
+                    }
+
+                    // Sort Handlers
+                    if (sortSelect) {
+                        sortSelect.addEventListener('change', () => {
+                            const val = sortSelect.value;
+                            const grid = document.getElementById('product-grid');
+                            const productCards = Array.from(document.querySelectorAll('.product-item'));
+
+                            if (val === 'price-asc') {
+                                productCards.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+                            } else if (val === 'price-desc') {
+                                productCards.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
+                            }
+                            productCards.forEach(card => grid.appendChild(card));
+                        });
+                    }
+
+                    // Mobile filter sidebar toggle
+                    const mobFilterBtn = document.getElementById('toggle-mobile-filter');
+                    const sidebar = document.getElementById('sidebar-filter');
+                    if (mobFilterBtn && sidebar) {
+                        mobFilterBtn.addEventListener('click', () => {
+                            sidebar.classList.toggle('hidden');
+                            window.scrollTo({ top: sidebar.offsetTop - 100, behavior: 'smooth' });
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </main>
+    <footer
+        class="w-full bg-surface-container-lowest border-t border-surface-container-highest pt-space-xl pb-space-lg">
+        <div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl">
+                <div class="md:col-span-5 space-y-space-sm">
+                    <div class="font-headline-md text-headline-md text-primary tracking-tight">ETIESTA</div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Dari Kriya Unik untuk Fashion
+                        Berkelanjutan.</p>
+                </div>
+                <div class="md:col-span-4 grid grid-cols-2 gap-space-md">
+                    <div class="space-y-space-xs">
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                            Navigasi</div>
+                        <ul class="space-y-2">
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="beranda" href="beranda.html">Beranda</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="lemari-retail" href="lemariretil.html">Lemari Retail</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="lemari-b2b" href="lemarib2b.html">Lemari B2B</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="keranjang" href="tasbelanja.html">Keranjang</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-space-xs">
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                            Informasi</div>
+                        <ul class="space-y-2">
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="tentang" href="tentangkami.html">Tentang ETIESTA</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="kontak" href="tentangkami.html">Kontak</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="faq" href="lemarib2b.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:col-span-3 space-y-space-xs">
+                    <div
+                        class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                        Koneksi</div>
+                    <div class="flex items-center gap-space-sm pt-1"><a aria-label="Instagram @byetiesta.id"
+                            class="p-2 border border-surface-variant hover:border-primary text-on-surface hover:text-primary transition-colors flex items-center justify-center"
+                            href="https://www.instagram.com/byetiesta.id/" target="_blank" rel="noopener"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                            </svg></a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                            href="https://www.instagram.com/byetiesta.id/" target="_blank"
+                            rel="noopener">@byetiesta.id</a></div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant pt-2">Workshop: Tambun Selatan, Bekasi
+                    </p>
+                </div>
+            </div>
+            <div
+                class="pt-space-md border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-space-sm">
+                <div class="font-body-sm text-body-sm text-on-surface-variant">© 2026 ETIESTA by Eti Yuniarti. All
+                    Rights Reserved.
+                </div>
+                <div
+                    class="font-label-uppercase text-label-uppercase text-on-surface-variant flex items-center gap-space-md">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a
+                        class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
