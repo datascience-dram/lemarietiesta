@@ -1242,6 +1242,37 @@
                 });
             });
 
+            // Sinkron ke Tas Belanja (localStorage bersama, type: b2b)
+            function bagSetB2b(key, qty, force) {
+                const prod = b2bDatabase[key];
+                if (!prod || typeof Etiesta === "undefined") return;
+                const bag = Etiesta.load();
+                const idx = bag.findIndex((i) => i.type === "b2b" && i.pid === key);
+                if (!qty || qty <= 0) {
+                    if (idx >= 0) bag.splice(idx, 1);
+                } else if (idx >= 0) {
+                    bag[idx].qty = qty;
+                } else if (force) {
+                    bag.push({ type: "b2b", pid: key, name: prod.name, price: prod.b2bPrice, size: "", moq: prod.moq, qty: qty });
+                }
+                Etiesta.save(bag);
+            }
+
+            function showBagToast(msg) {
+                let t = document.getElementById("bagToast");
+                if (!t) {
+                    t = document.createElement("div");
+                    t.id = "bagToast";
+                    t.style.cssText = "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#1a1c1c;color:#fff;padding:12px 18px;font-size:13px;display:flex;gap:14px;align-items:center;box-shadow:0 4px 16px rgba(0,0,0,.25);max-width:92vw";
+                    document.body.appendChild(t);
+                }
+                t.innerHTML = '<span></span><a href="tasbelanja.html" style="text-decoration:underline;white-space:nowrap">Lihat Tas Belanja</a>';
+                t.firstChild.textContent = msg;
+                t.style.display = "flex";
+                clearTimeout(t._h);
+                t._h = setTimeout(() => { t.style.display = "none"; }, 3500);
+            }
+
             // Add to B2B cart action
             document.querySelectorAll(".btn-add-b2b").forEach((btn) => {
                 btn.addEventListener("click", () => {
@@ -1249,7 +1280,9 @@
                     const input = document.getElementById("qty-" + prodId);
                     const qty = input ? parseInt(input.value) : (b2bDatabase[prodId] ? b2bDatabase[prodId].moq : 10);
                     cartState[prodId] = qty;
+                    bagSetB2b(prodId, qty, true);
                     renderCart();
+                    showBagToast((b2bDatabase[prodId] ? b2bDatabase[prodId].name : "Produk") + " (" + qty + " pcs) masuk ke Tas Belanja");
                     const simSection = document.getElementById("order-simulator");
                     if (simSection) {
                         simSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1259,6 +1292,7 @@
 
             // Clear Cart
             document.getElementById("btnClearCart").addEventListener("click", () => {
+                Object.keys(cartState).forEach((k) => bagSetB2b(k, 0));
                 cartState = {};
                 renderCart();
             });
@@ -1334,15 +1368,18 @@
                 if (newQty < prod.moq) {
                     if (confirm(`Minimum order untuk ${prod.name} adalah ${prod.moq} pcs. Ingin menghapus dari daftar pesanan?`)) {
                         delete cartState[key];
+                        bagSetB2b(key, 0);
                     }
                 } else {
                     cartState[key] = newQty;
+                    bagSetB2b(key, newQty);
                 }
                 renderCart();
             };
 
             window.removeFromCart = function (key) {
                 delete cartState[key];
+                bagSetB2b(key, 0);
                 renderCart();
             };
 
