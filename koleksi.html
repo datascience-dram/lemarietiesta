@@ -138,6 +138,9 @@
                             <button
                                 class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
                                 data-cat="dress">Dress</button>
+                            <button
+                                class="cat-pill px-4 py-2 font-label-uppercase text-label-uppercase bg-surface-container text-on-surface hover:bg-surface-variant uppercase transition-all duration-200"
+                                data-cat="aksesoris">Aksesoris</button>
                         </div>
                         <!-- Sorting Menu -->
                         <div class="flex items-center gap-3 pb-3 sm:pb-0">
@@ -215,7 +218,7 @@
                                         Atasan
                                     </span>
                                     <span
-                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">4</span>
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">3</span>
                                 </label>
                                 <label class="flex items-center justify-between cursor-pointer group py-1">
                                     <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
@@ -224,7 +227,7 @@
                                         Bawahan
                                     </span>
                                     <span
-                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">3</span>
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">1</span>
                                 </label>
                                 <label class="flex items-center justify-between cursor-pointer group py-1">
                                     <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
@@ -233,7 +236,7 @@
                                         Outer
                                     </span>
                                     <span
-                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">3</span>
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">1</span>
                                 </label>
                                 <label class="flex items-center justify-between cursor-pointer group py-1">
                                     <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
@@ -242,16 +245,16 @@
                                         Dress
                                     </span>
                                     <span
-                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">2</span>
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">1</span>
                                 </label>
-                                <label
-                                    class="flex items-center justify-between cursor-not-allowed group py-1 opacity-50">
-                                    <span class="flex items-center gap-2.5 text-on-surface">
-                                        <input class="accent-primary w-4 h-4" disabled="" name="cat_filter" type="radio"
-                                            value="accessories" />
-                                        Aksesori
+                                <label class="flex items-center justify-between cursor-pointer group py-1">
+                                    <span class="flex items-center gap-2.5 text-on-surface group-hover:text-primary">
+                                        <input class="accent-primary w-4 h-4 cursor-pointer" name="cat_filter"
+                                            type="radio" value="aksesoris" />
+                                        Aksesoris
                                     </span>
-                                    <span class="font-label-uppercase text-[11px]">0</span>
+                                    <span
+                                        class="font-label-uppercase text-[11px] text-on-surface-variant group-hover:text-primary">6</span>
                                 </label>
                             </div>
                         </div>
@@ -794,6 +797,417 @@
                                             <button
                                                 class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
                                                 onclick="addToBag('Minimalist Mockneck Top', 149000, 'Ribbed Supima Cotton', 'M')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Product Card 7 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="pouch apel batik" data-price="85000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Pouch Apel Batik"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas1.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        BESTSELLER
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 15 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Pouch Apel Batik', 85000, 'Patchwork Batik', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Patchwork Batik</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Pouch Apel Batik
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Pouch resleting bentuk apel dari potongan kain batik gradasi merah muda.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                85.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Pouch%20Apel%20Batik%20%28Rp%2085.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Pouch Apel Batik', 85000, 'Patchwork Batik', 'One Size')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 8 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="set pouch mini resleting" data-price="95000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Set Pouch Mini Resleting"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas3.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-secondary text-on-secondary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        SET 4 PCS
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 24 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Set Pouch Mini Resleting', 95000, 'Batik Aneka Warna', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Batik Aneka Warna</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Set Pouch Mini Resleting
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Satu set pouch mini berkait gantungan, cocok untuk kunci, koin, dan kartu.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                95.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Set%20Pouch%20Mini%20Resleting%20%28Rp%2095.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Set Pouch Mini Resleting', 95000, 'Batik Aneka Warna', 'One Size')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 9 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="pouch patchwork oranye" data-price="120000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Pouch Patchwork Oranye"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas4.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        NEW
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 18 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Pouch Patchwork Oranye', 120000, 'Patchwork Batik', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Patchwork Batik</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Pouch Patchwork Oranye
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Pouch kosmetik patchwork batik dengan resleting oranye dan tali tangan
+                                            kulit.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                120.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Pouch%20Patchwork%20Oranye%20%28Rp%20120.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Pouch Patchwork Oranye', 120000, 'Patchwork Batik', 'One Size')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 10 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="tas knot patchwork batik" data-price="245000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Tas Knot Patchwork Batik"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas6.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-secondary text-on-secondary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        LIMITED
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 8 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Tas Knot Patchwork Batik', 245000, 'Patchwork Batik', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Patchwork Batik</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Tas Knot Patchwork Batik
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Tas tangan model knot dari perpaduan kain batik biru dan oranye.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                245.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Tas%20Knot%20Patchwork%20Batik%20%28Rp%20245.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Tas Knot Patchwork Batik', 245000, 'Patchwork Batik', 'One Size')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 11 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="pouch bordir kuning" data-price="135000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Pouch Bordir Kuning"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas7.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-secondary text-on-secondary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        ESSENTIAL
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 12 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Pouch Bordir Kuning', 135000, 'Batik Bordir', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Batik Bordir</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Pouch Bordir Kuning
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Pouch datar berbordir tangan dengan palet kuning, hijau zaitun, dan cokelat.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                135.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Pouch%20Bordir%20Kuning%20%28Rp%20135.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Pouch Bordir Kuning', 135000, 'Batik Bordir', 'One Size')">
+                                                <span class="material-symbols-outlined text-[14px]">add</span>
+                                                <span>Beli</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Product Card 12 (Aksesoris) -->
+                            <article
+                                class="product-item group flex flex-col bg-surface-container-lowest border border-surface-container-highest transition-all duration-300 hover:shadow-lg"
+                                data-category="aksesoris" data-name="tas selempang tali pintal" data-price="185000">
+                                <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+                                    <img alt="Tas Selempang Tali Pintal"
+                                        class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        src="foto/p-tas5.jpg" />
+                                    <span
+                                        class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-2.5 py-1 uppercase">
+                                        NEW
+                                    </span>
+                                    <span
+                                        class="hidden sm:inline-block absolute top-3 right-3 bg-surface-bright/95 backdrop-blur-sm text-on-surface font-label-uppercase text-[10px] px-2 py-0.5 border border-surface-variant">
+                                        Stok: 10 pcs
+                                    </span>
+                                    <div
+                                        class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <button
+                                            class="w-full py-2.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 shadow-sm"
+                                            onclick="addToBag('Tas Selempang Tali Pintal', 185000, 'Batik Kombinasi', 'One Size')">
+                                            <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                                            <span>Tambah Cepat</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-3 sm:gap-4">
+                                    <div class="space-y-1.5">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 text-on-surface-variant font-label-uppercase text-[10px] sm:text-[11px] tracking-wider uppercase">
+                                            <span>Aksesoris • Handmade</span>
+                                            <span class="text-secondary font-medium">Batik Kombinasi</span>
+                                        </div>
+                                        <h3
+                                            class="font-subhead-editorial text-subhead-editorial text-primary group-hover:text-secondary transition-colors">
+                                            Tas Selempang Tali Pintal
+                                        </h3>
+                                        <p class="font-body-sm text-[12px] text-on-surface-variant line-clamp-1">
+                                            Tas selempang kecil dengan tali pintal dan lipatan penutup berbahan kain
+                                            tenun.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-surface-container-highest">
+                                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5">
+                                            <div class="flex items-center gap-1">
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-surface-container font-label-uppercase text-[10px]">One
+                                                    Size</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-sm sm:text-body-md font-semibold text-primary whitespace-nowrap">Rp
+                                                185.000</span>
+                                        </div>
+                                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 pt-1">
+                                            <a class="py-2 border border-primary text-primary font-button-text text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-all text-center"
+                                                href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20ingin%20menanyakan%20aksesoris%20Tas%20Selempang%20Tali%20Pintal%20%28Rp%20185.000%29."
+                                                target="_blank">
+                                                Tanya
+                                            </a>
+                                            <button
+                                                class="py-2 bg-primary text-on-primary font-button-text text-[11px] uppercase hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1"
+                                                onclick="addToBag('Tas Selempang Tali Pintal', 185000, 'Batik Kombinasi', 'One Size')">
                                                 <span class="material-symbols-outlined text-[14px]">add</span>
                                                 <span>Beli</span>
                                             </button>
