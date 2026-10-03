@@ -203,13 +203,13 @@
                             <!-- Breakdown Line Items -->
                             <div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
                                 <div class="flex items-center justify-between">
-                                    <span>Subtotal Retail (3 Pcs)</span>
+                                    <span id="label-retail-subtotal">Subtotal Retail (3 Pcs)</span>
                                     <span class="font-medium text-primary" id="summary-retail-subtotal">Rp
                                         477.000</span>
                                 </div>
                                 <div class="flex items-center justify-between">
                                     <span class="flex items-center gap-1">
-                                        Subtotal Kemitraan B2B (1 Seri)
+                                        <span id="label-b2b-subtotal">Subtotal Kemitraan B2B (1 Seri)</span>
                                         <span class="material-symbols-outlined text-[14px] text-secondary"
                                             title="Harga khusus grosir mitra">info</span>
                                     </span>
@@ -451,7 +451,7 @@
                     box.innerHTML = rows.length ? rows.map(({ it, i }) => `
     <div class="flex items-center justify-between gap-4 py-5 border-b border-surface-variant">
       <div class="min-w-0"><div class="font-body-md text-primary font-medium">${esc(it.name)}</div>
-        <div class="font-body-sm text-on-surface-variant">Size ${esc(it.size || '-')} · ${fmt(it.price)}${it.type === 'b2b' ? ' · Grosir' : ''}</div></div>
+        <div class="font-body-sm text-on-surface-variant">${it.type === 'b2b' ? 'Seri B2B · MOQ ' + (it.moq || '-') + ' pcs · ' + fmt(it.price) + '/pcs · Grosir' : 'Size ' + esc(it.size || '-') + ' · ' + fmt(it.price)}</div></div>
       <div class="flex items-center gap-3"><button onclick="chg(${i},-1)" class="w-8 h-8 border border-surface-variant" aria-label="Kurangi">−</button><span>${it.qty}</span><button onclick="chg(${i},1)" class="w-8 h-8 border border-surface-variant" aria-label="Tambah">+</button></div>
       <div class="font-body-md font-bold w-28 text-right">${fmt(it.price * it.qty)}</div>
       <button onclick="rm(${i})" aria-label="Hapus"><span class="material-symbols-outlined text-[20px]">close</span></button>
@@ -459,6 +459,9 @@
                     const sum = t => cart.filter(i => i.type === t).reduce((a, i) => a + i.price * i.qty, 0);
                     setText('summary-retail-subtotal', fmt(sum('retail'))); setText('summary-b2b-subtotal', fmt(sum('b2b')));
                     setText('summary-discount', 'Rp 0'); setText('grand-total-display', fmt(sum('retail') + sum('b2b')));
+                    const cnt = tp => cart.filter(i => tp === 'all' || i.type === tp).reduce((a, i) => a + i.qty, 0);
+                    setText('filter-all', 'Semua Item (' + cnt('all') + ')'); setText('filter-retail', 'Pesanan Retail (' + cnt('retail') + ')'); setText('filter-b2b', 'Pesanan Seri B2B (' + cart.filter(i => i.type === 'b2b').length + ')');
+                    setText('label-retail-subtotal', 'Subtotal Retail (' + cnt('retail') + ' Pcs)'); setText('label-b2b-subtotal', 'Subtotal Kemitraan B2B (' + cart.filter(i => i.type === 'b2b').length + ' Seri)');
                     setText('total-qty-badge', cart.reduce((a, i) => a + i.qty, 0) + ' Pcs'); setText('total-savings-display', '');
                 }
                 function chg(i, d) { const c = Etiesta.load(); c[i].qty += d; if (c[i].qty < 1) c.splice(i, 1); Etiesta.save(c); render(); }
@@ -470,7 +473,7 @@
                     const cart = Etiesta.load(); if (!cart.length) { alert('Tas belanja masih kosong.'); return; }
                     const notes = (document.getElementById('atelier-notes') || {}).value || '';
                     let m = 'Halo ETIESTA Atelier, saya ingin konfirmasi ketersediaan stok tas belanja:\n\n';
-                    cart.forEach(i => { m += `• ${i.qty}x ${i.name}${i.size ? ' (Size: ' + i.size + ')' : ''}${i.type === 'b2b' ? ' [Grosir]' : ''} - ${fmt(i.price * i.qty)}\n`; });
+                    cart.forEach(i => { m += `• ${i.qty}x ${i.name}${i.size ? ' (Size: ' + i.size + ')' : ''}${i.type === 'b2b' ? ' [Grosir B2B]' : ''} - ${fmt(i.price * i.qty)}\n`; });
                     m += `\nTotal Estimasi: ${document.getElementById('grand-total-display').textContent}\n`;
                     if (notes.trim()) m += `Catatan Tambahan: ${notes.trim()}\n`;
                     m += '\nMohon info ketersediaan stok & nomor rekening resmi ETIESTA. Terima kasih.';
