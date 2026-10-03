@@ -66,9 +66,9 @@
                     class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
                     data-path="beranda" href="beranda.html">Beranda</a><a aria-current="page"
                     class="font-button-text text-button-text uppercase transition-colors text-primary font-medium border-b border-primary pb-0.5"
-                    data-path="lemari-retail" href="lemariretil.html">Lemari Retail</a><a
+                    data-path="koleksi" href="koleksi.html">Koleksi</a><a
                     class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
-                    data-path="lemari-b2b" href="lemarib2b.html">Lemari B2B</a><a
+                    data-path="pesanan-bisnis" href="pesananbisnis.html">Pesanan Bisnis</a><a
                     class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
                     data-path="tentang" href="tentangkami.html">Tentang</a></nav>
             <div class="flex items-center gap-space-md"><a
@@ -92,7 +92,7 @@
                         <a class="hover:text-primary transition-colors" data-path="beranda"
                             href="beranda.html">Beranda</a>
                         <span>/</span>
-                        <span class="text-primary font-medium">Lemari Retail</span>
+                        <span class="text-primary font-medium">Koleksi</span>
                     </nav>
                     <!-- Main Editorial Title Block -->
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end justify-between">
@@ -103,7 +103,7 @@
                                     class="font-label-uppercase text-label-uppercase text-secondary uppercase tracking-widest">Katalog
                                     Siap Pakai</span>
                             </div>
-                            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Lemari Retail</h1>
+                            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Koleksi</h1>
                             <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
                                 Temukan koleksi fashion ETIESTA untuk kebutuhan sehari-hari — siluet modern, material
                                 premium, dan kenyamanan esensial yang dirancang melampaui musim.
@@ -336,7 +336,7 @@
                             <p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">Pesan minimum 50
                                 pcs dengan kustomisasi label &amp; potongan eksklusif.</p>
                             <a class="inline-flex items-center gap-1 font-label-uppercase text-[11px] text-primary uppercase font-medium hover:underline pt-1"
-                                data-path="lemari-b2b" href="lemarib2b.html">
+                                data-path="pesanan-bisnis" href="pesananbisnis.html">
                                 <span>Buka Portal B2B</span>
                                 <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                             </a>
@@ -812,13 +812,13 @@
                                 <h2 class="font-headline-md text-headline-md text-on-primary tracking-tight">Kombinasi
                                     Siluet yang Bersahaja</h2>
                                 <p class="font-body-md text-body-md text-inverse-on-surface leading-relaxed">
-                                    Seluruh garmen dalam Lemari Retail ETIESTA dirancang dengan palet nada serasi
+                                    Seluruh garmen dalam Koleksi ETIESTA dirancang dengan palet nada serasi
                                     sehingga dapat dipadupadankan tanpa batas antara atasan kasual dan celana tailored.
                                 </p>
                             </div>
                             <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                                 <a class="px-6 py-3.5 bg-on-primary text-primary font-button-text text-button-text uppercase hover:bg-surface-container transition-colors text-center"
-                                    href="https://wa.me/6285885332703?text=Halo%20ETIESTA,%20saya%20ingin%20konsultasi%20panduan%20ukuran%20dan%20rekomendasi%20styling%20Lemari%20Retail."
+                                    href="https://wa.me/6285885332703?text=Halo%20ETIESTA,%20saya%20ingin%20konsultasi%20panduan%20ukuran%20dan%20rekomendasi%20styling%20Koleksi."
                                     target="_blank">
                                     Konsultasi Styling
                                 </a>
@@ -853,7 +853,7 @@
                         <p class="font-subhead-editorial text-subhead-editorial text-primary">Kantong Anda masih kosong
                         </p>
                         <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Pilihlah siluet favorit
-                            Anda dari katalog Lemari Retail untuk memulai pesanan.</p>
+                            Anda dari katalog Koleksi untuk memulai pesanan.</p>
                     </div>
                 </div>
                 <!-- Drawer Footer & WhatsApp Checkout CTA -->
@@ -999,7 +999,7 @@
           <div class="h-full flex flex-col items-center justify-center text-center py-16 space-y-3">
             <span class="material-symbols-outlined text-[48px] text-surface-tint">local_mall</span>
             <p class="font-subhead-editorial text-subhead-editorial text-primary">Kantong Anda masih kosong</p>
-            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Pilihlah siluet favorit Anda dari katalog Lemari Retail untuk memulai pesanan.</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Pilihlah siluet favorit Anda dari katalog Koleksi untuk memulai pesanan.</p>
           </div>
         `;
                         subtotalEl.textContent = 'Rp 0';
@@ -1040,7 +1040,7 @@
                     totalEl.textContent = formatRupiah(subtotal);
 
                     // Compose clean deep link message
-                    let message = `Halo ETIESTA, saya ingin melakukan checkout untuk pesanan Lemari Retail:%0A%0A`;
+                    let message = `Halo ETIESTA, saya ingin melakukan checkout untuk pesanan Koleksi:%0A%0A`;
                     cart.forEach((item, i) => {
                         message += `${i + 1}. *${item.title}* (${item.size}) x${item.qty} - ${formatRupiah(item.price * item.qty)}%0A`;
                     });
@@ -1221,10 +1221,10 @@
                                     data-path="beranda" href="beranda.html">Beranda</a></li>
                             <li class="list-none"><a
                                     class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                                    data-path="lemari-retail" href="lemariretil.html">Lemari Retail</a></li>
+                                    data-path="koleksi" href="koleksi.html">Koleksi</a></li>
                             <li class="list-none"><a
                                     class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                                    data-path="lemari-b2b" href="lemarib2b.html">Lemari B2B</a></li>
+                                    data-path="pesanan-bisnis" href="pesananbisnis.html">Pesanan Bisnis</a></li>
                             <li class="list-none"><a
                                     class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
                                     data-path="keranjang" href="tasbelanja.html">Keranjang</a></li>
@@ -1243,7 +1243,7 @@
                                     data-path="kontak" href="tentangkami.html">Kontak</a></li>
                             <li class="list-none"><a
                                     class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                                    data-path="faq" href="lemarib2b.html">FAQ</a></li>
+                                    data-path="faq" href="pesananbisnis.html">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
