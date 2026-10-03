@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#fbf9f5" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-bright": "#fbf9f5", "primary": "#000000", "background": "#fbf9f5", "primary-fixed": "#e5e2e1", "on-background": "#1b1c1a", "on-primary-fixed-variant": "#474646", "on-tertiary-container": "#85847f", "surface-variant": "#e4e2de", "surface-container-low": "#f5f3ef", "on-secondary-fixed-variant": "#4a473d", "primary-fixed-dim": "#c8c6c5", "on-tertiary": "#ffffff", "surface-container-high": "#eae8e4", "inverse-surface": "#30312e", "on-secondary-fixed": "#1e1c13", "inverse-on-surface": "#f2f0ed", "on-primary-fixed": "#1c1b1b", "on-error": "#ffffff", "on-primary": "#ffffff", "on-secondary-container": "#666258", "on-tertiary-fixed-variant": "#474743", "tertiary-container": "#1c1c18", "secondary-fixed-dim": "#ccc6b9", "surface": "#fbf9f5", "secondary": "#625e54", "outline-variant": "#c4c7c7", "on-tertiary-fixed": "#1c1c18", "on-surface-variant": "#444748", "secondary-fixed": "#e8e2d5", "on-primary-container": "#858383", "surface-dim": "#dbdad6", "error-container": "#ffdad6", "error": "#ba1a1a", "inverse-primary": "#c8c6c5", "tertiary-fixed": "#e5e2dc", "tertiary-fixed-dim": "#c9c6c1", "on-surface": "#1b1c1a", "secondary-container": "#e5dfd2", "on-secondary": "#ffffff", "tertiary": "#000000", "surface-tint": "#5f5e5e", "primary-container": "#1c1b1b", "surface-container": "#efeeea", "surface-container-highest": "#e4e2de", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "outline": "#747878" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1.25rem", "space-lg": "3rem", "space-xl": "6rem", "gutter": "2rem", "space-xs": "0.5rem", "margin": "4rem", "space-sm": "1rem", "margin-tablet": "2rem", "gutter-tablet": "1.5rem", "space-md": "1.5rem", "gutter-mobile": "1rem" }, fontFamily: { "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "subhead-editorial": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "button-text": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "headline-md-mobile": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "label-uppercase": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.375rem", "letterSpacing": "0.015em", "fontWeight": "400" }], "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "subhead-editorial": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" }], "button-text": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "500" }], "display-hero": ["5rem", { "lineHeight": "5.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-md-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero-mobile": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-uppercase": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.18em", "fontWeight": "600" }] } } } }</script>
+    <script src="site.js"></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest">
+        <div class="h-20 w-full px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between">
+            <div class="flex items-center gap-space-sm"><a
+                    class="flex items-center gap-3 font-headline-sm text-headline-sm tracking-tight text-primary uppercase"
+                    data-path="beranda" href="beranda.html"><img src="foto/logo-nav.png" alt="Logo ETIESTA"
+                        class="h-9 w-9 object-contain" width="36" height="36">ETIESTA</a></div>
+            <nav class="hidden md:flex items-center gap-space-lg"
+                data-active-classes="text-primary font-medium border-b border-primary pb-0.5"><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="beranda" href="beranda.html">Beranda</a><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="koleksi" href="koleksi.html">Koleksi</a><a aria-current="page"
+                    class="font-button-text text-button-text uppercase transition-colors text-primary font-medium border-b border-primary pb-0.5"
+                    data-path="pesanan-bisnis" href="pesananbisnis.html">Pesanan Bisnis</a><a
+                    class="font-button-text text-button-text uppercase text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="tentang" href="tentangkami.html">Tentang</a></nav>
+            <div class="flex items-center gap-space-md"><a
+                    class="font-button-text text-button-text uppercase text-on-surface hover:text-primary transition-colors flex items-center gap-1.5 py-1 px-2 border border-surface-variant hover:border-primary"
+                    data-path="keranjang" href="tasbelanja.html"><span
+                        class="material-symbols-outlined text-[16px]">shopping_bag</span><span data-bag-count>Bag
+                        (0)</span></a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-5rem)]">
+        <div class="flex flex-col w-full">
+            <!-- Top Breadcrumb & Editorial Header Sub-bar -->
+            <section
+                class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-md pb-space-sm bg-surface">
+                <div
+                    class="flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-uppercase text-label-uppercase">
+                    <nav class="flex items-center gap-space-xs tracking-widest uppercase">
+                        <a class="hover:text-primary transition-colors" data-path="beranda"
+                            href="beranda.html">Beranda</a>
+                        <span>/</span>
+                        <span class="text-primary font-bold">Pesanan Bisnis</span>
+                    </nav>
+                    <div class="flex items-center gap-space-sm">
+                        <span class="inline-flex items-center gap-1.5 text-secondary">
+                            <span class="w-1.5 h-1.5 bg-primary inline-block"></span>
+                            KEMITRAAN &amp; DISTRIBUSI GROSIR 2026/2027
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <!-- Editorial Hero Section -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-lg bg-surface">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+                    <div class="lg:col-span-8 space-y-space-md">
+                        <div class="space-y-space-xs">
+                            <p
+                                class="font-label-uppercase text-label-uppercase tracking-[0.25em] text-secondary uppercase">
+                                Kurasi Busana Komersial Berskala
+                            </p>
+                            <h1
+                                class="font-display-hero text-display-hero md:text-display-hero text-primary tracking-tight font-normal">
+                                Pesanan Bisnis.
+                            </h1>
+                        </div>
+                        <p
+                            class="font-subhead-editorial text-subhead-editorial text-on-surface-variant max-w-3xl leading-relaxed">
+                            Solusi kurasi busana siap jual berstandar editorial untuk butik independen, kurator retail,
+                            dan mitra korporat. Dapatkan marjin sehat dengan fleksibilitas minimum pemesanan mulai dari
+                            10-12 pcs per seri koleksi.
+                        </p>
+                        <!-- Value Props Pill Tags -->
+                        <div class="pt-space-xs flex flex-wrap gap-space-xs">
+                            <div
+                                class="bg-surface-container-low px-space-sm py-2 text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px] text-primary">inventory_2</span>
+                                <span>Minimum Pemesanan Mulai 10–12 pcs/seri</span>
+                            </div>
+                            <div
+                                class="bg-surface-container-low px-space-sm py-2 text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px] text-primary">trending_up</span>
+                                <span>Rekomendasi Marjin Retail 40% – 55%</span>
+                            </div>
+                            <div
+                                class="bg-surface-container-low px-space-sm py-2 text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+                                <span>QC Garmen Berlapis &amp; Siap Pajang</span>
+                            </div>
+                            <div
+                                class="bg-surface-container-low px-space-sm py-2 text-on-surface font-body-sm text-body-sm flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+                                <span>Dedicated Concierge WhatsApp 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quick Summary Plinth -->
+                    <div class="lg:col-span-4 bg-surface-container-low p-space-md space-y-space-sm">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="font-label-uppercase text-label-uppercase tracking-widest text-secondary uppercase">Status
+                                Portofolio</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 font-label-uppercase text-label-uppercase text-primary">
+                                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Batch Aktif
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+                            <div class="bg-surface-container-lowest p-space-sm">
+                                <div class="font-headline-sm text-headline-sm text-primary">12 Pcs</div>
+                                <div class="font-label-uppercase text-label-uppercase text-secondary mt-1">Ambang MOQ
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-lowest p-space-sm">
+                                <div class="font-headline-sm text-headline-sm text-primary">40-55%</div>
+                                <div class="font-label-uppercase text-label-uppercase text-secondary mt-1">Estimasi
+                                    Margin</div>
+                            </div>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Seluruh produk dikirim terbungkus dust-bag editorial terpisah dengan hangtag spesifikasi
+                            siap jual.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- 4 Pillars Section (Why ETIESTA B2B) -->
+            <section
+                class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-lg bg-surface-container-low">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-space-xs">
+                    <div>
+                        <p class="font-label-uppercase text-label-uppercase tracking-widest text-secondary uppercase">
+                            Standar Keunggulan</p>
+                        <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-normal">Mengapa
+                            ETIESTA B2B?</h2>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Infrastruktur rantai pasok terpadu yang membebaskan butik Anda fokus pada penjualan dan relasi
+                        pelanggan.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-3 sm:gap-gutter">
+                    <!-- Feature 1 -->
+                    <div class="bg-surface-container-lowest p-space-md flex flex-col justify-between space-y-space-md">
+                        <div class="space-y-space-xs">
+                            <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[22px]">payments</span>
+                            </div>
+                            <div class="font-headline-sm text-headline-sm text-primary pt-space-xs">Harga Grosir
+                                Bertingkat</div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Skema harga grosir berjenjang transparan dirancang untuk menjaga marjin kotor retail
+                                Anda tetap di kisaran 40% hingga 55%.
+                            </p>
+                        </div>
+                        <div class="font-label-uppercase text-label-uppercase text-secondary">01 / MARJIN SEHAT</div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-surface-container-lowest p-space-md flex flex-col justify-between space-y-space-md">
+                        <div class="space-y-space-xs">
+                            <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[22px]">package_2</span>
+                            </div>
+                            <div class="font-headline-sm text-headline-sm text-primary pt-space-xs">MOQ Ramah Butik
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Pemesanan mulai 8-12 pcs per seri warna dengan variasi ukuran lengkap, mempercepat
+                                perputaran arus kas modal kerja.
+                            </p>
+                        </div>
+                        <div class="font-label-uppercase text-label-uppercase text-secondary">02 / FLEKSIBILITAS MODAL
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-surface-container-lowest p-space-md flex flex-col justify-between space-y-space-md">
+                        <div class="space-y-space-xs">
+                            <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[22px]">architecture</span>
+                            </div>
+                            <div class="font-headline-sm text-headline-sm text-primary pt-space-xs">Koleksi
+                                Terstandarisasi</div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Pola presisi atelier Eropa, seleksi serat alami ramah iklim tropis, serta inspeksi cacat
+                                3 lapis sebelum pengemasan.
+                            </p>
+                        </div>
+                        <div class="font-label-uppercase text-label-uppercase text-secondary">03 / KONTROL MUTU ATELIER
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-surface-container-lowest p-space-md flex flex-col justify-between space-y-space-md">
+                        <div class="space-y-space-xs">
+                            <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[22px]">chat</span>
+                            </div>
+                            <div class="font-headline-sm text-headline-sm text-primary pt-space-xs">WhatsApp Concierge
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Akses langsung mitra ke akun representatif ETIESTA untuk penerbitan faktur pajak,
+                                booking kuota kargo, dan sampel material.
+                            </p>
+                        </div>
+                        <div class="font-label-uppercase text-label-uppercase text-secondary">04 / LAYANAN PRIORITAS
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Filter & Catalog Toolbar -->
+            <section
+                class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-lg pb-space-sm bg-surface">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm">
+                    <!-- Category Tabs -->
+                    <div class="flex flex-wrap items-center gap-space-xs" id="categoryFilterContainer">
+                        <button
+                            class="b2b-cat-btn active px-4 py-2 bg-primary text-on-primary font-label-uppercase text-label-uppercase uppercase tracking-wider transition-colors"
+                            data-cat="all">
+                            Semua B2B (6)
+                        </button>
+                        <button
+                            class="b2b-cat-btn px-4 py-2 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase tracking-wider hover:bg-surface-variant transition-colors"
+                            data-cat="atasan">
+                            Seri Atasan (3)
+                        </button>
+                        <button
+                            class="b2b-cat-btn px-4 py-2 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase tracking-wider hover:bg-surface-variant transition-colors"
+                            data-cat="bawahan">
+                            Seri Bawahan (1)
+                        </button>
+                        <button
+                            class="b2b-cat-btn px-4 py-2 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase tracking-wider hover:bg-surface-variant transition-colors"
+                            data-cat="outerwear">
+                            Seri Outerwear (1)
+                        </button>
+                        <button
+                            class="b2b-cat-btn px-4 py-2 bg-surface-container text-on-surface font-label-uppercase text-label-uppercase uppercase tracking-wider hover:bg-surface-variant transition-colors"
+                            data-cat="dress">
+                            Seri Dress (1)
+                        </button>
+                    </div>
+                    <!-- Secondary Filters & Sort Dropdown -->
+                    <div class="flex flex-wrap items-center gap-space-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Filter
+                                MOQ:</span>
+                            <select
+                                class="bg-surface-container-low px-3 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"
+                                id="moqFilter">
+                                <option value="all">Semua MOQ</option>
+                                <option value="8">≤ 8 pcs/seri</option>
+                                <option value="10">≤ 10 pcs/seri</option>
+                                <option value="12">≤ 12 pcs/seri</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="font-label-uppercase text-label-uppercase text-secondary uppercase">Urutan:</span>
+                            <select
+                                class="bg-surface-container-low px-3 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer"
+                                id="sortSelect">
+                                <option value="popular">Paling Banyak Diminati</option>
+                                <option value="moq-asc">Minimum Order Terendah</option>
+                                <option value="margin-desc">Margin Tertinggi</option>
+                                <option value="price-asc">Harga Grosir Terendah</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Catalog Grid Section -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pb-space-xl bg-surface">
+                <div class="grid grid-cols-2 gap-3 sm:gap-gutter" id="productGrid">
+                    <!-- Product Card 1: Oversized Boxy Tee -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="78000" data-category="atasan" data-id="tee-boxy" data-moq="12"
+                        data-name="Oversized Boxy Tee" data-retail-price="129000" data-stock="180">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Oversized Boxy Tee Editorial Fashion"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-baju5.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    Best Value Reseller
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 180 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Atasan / Kasual</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Oversized Boxy Tee
+                                        </h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 12 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    100% Premium Combed 24s Heavyweight. Kerah ganda bebas molor, siluet drop-shoulder
+                                    jatuh sempurna.
+                                </p>
+                                <!-- Price & Margin Calculation Plinth -->
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 129.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 78.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~39.5% (Rp 51.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quantity & B2B Action Box -->
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="tee-boxy">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-tee-boxy" min="12" step="1" type="number" value="12" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="tee-boxy">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="tee-boxy">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2: Tailored Linen Blazer -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="175000" data-category="outerwear" data-id="linen-blazer" data-moq="8"
+                        data-name="Tailored Linen Blazer" data-retail-price="289000" data-stock="95">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Tailored Linen Blazer Editorial Fashion"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-baju4.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    Signature Atelier
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 95 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Outerwear / Formal</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Tailored Linen Blazer
+                                        </h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 8 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    100% Belgian Linen Pre-washed Unlined. Struktur drape natural bertekstur, ideal
+                                    untuk etalase butik premium.
+                                </p>
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 289.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 175.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~39.4% (Rp 114.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="linen-blazer">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-linen-blazer" min="8" step="1" type="number" value="8" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="linen-blazer">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="linen-blazer">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3: Relaxed Linen Lounge Shirt -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="108000" data-category="atasan" data-id="lounge-shirt" data-moq="12"
+                        data-name="Relaxed Linen Lounge Shirt" data-retail-price="179000" data-stock="140">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Relaxed Linen Lounge Shirt"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-baju3.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    Reseller Favorite
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 140 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Atasan / Kemeja</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Relaxed Linen Lounge
+                                            Shirt</h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 12 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Pure Washed Slub Linen bertekstur lembut. Kancing mutiara sintetis matte, potongan
+                                    santai unisex berkelas.
+                                </p>
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 179.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 108.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~39.6% (Rp 71.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="lounge-shirt">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-lounge-shirt" min="12" step="1" type="number" value="12" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="lounge-shirt">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="lounge-shirt">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4: Pleated Wide-Leg Trousers -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="132000" data-category="bawahan" data-id="pleated-trousers" data-moq="10"
+                        data-name="Pleated Wide-Leg Trousers" data-retail-price="219000" data-stock="110">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Pleated Wide-Leg Trousers Editorial"
+                                    class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-tas6.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    Core Collection
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 110 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Bawahan / Celana</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Pleated Wide-Leg
+                                            Trousers</h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 10 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Poly Wool-Touch Tailored Weave. Anti-kusut seharian, siluet high-waist berlipit
+                                    tajam untuk look profesional elegan.
+                                </p>
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 219.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 132.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~39.7% (Rp 87.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="pleated-trousers">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-pleated-trousers" min="10" step="1" type="number" value="10" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="pleated-trousers">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="pleated-trousers">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5: Structured Poplin Shirt Dress -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="158000" data-category="dress" data-id="poplin-dress" data-moq="10"
+                        data-name="Structured Poplin Shirt Dress" data-retail-price="259000" data-stock="75">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Structured Poplin Shirt Dress"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-sample2.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    New Editorial
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 75 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Dress / One-Piece</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Structured Poplin
+                                            Shirt Dress</h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 10 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Crisp 100% Cotton Poplin dengan ikat pinggang kain senada. Pilihan favorit kurasi
+                                    butik modest &amp; modern workwear.
+                                </p>
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 259.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 158.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~39.0% (Rp 101.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="poplin-dress">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-poplin-dress" min="10" step="1" type="number" value="10" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="poplin-dress">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="poplin-dress">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6: Minimalist Mockneck Layering Top -->
+                    <div class="product-item bg-surface-container-lowest flex flex-col justify-between"
+                        data-b2b-price="88000" data-category="atasan" data-id="mockneck-top" data-moq="15"
+                        data-name="Minimalist Mockneck Layering Top" data-retail-price="149000" data-stock="220">
+                        <div>
+                            <div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+                                <img alt="Minimalist Mockneck Layering Top"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    src="foto/p-sample1.jpg" />
+                                <div
+                                    class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-on-primary font-label-uppercase text-[9px] sm:text-label-uppercase px-2 sm:px-2.5 py-1 uppercase tracking-widest">
+                                    Restock Essential
+                                </div>
+                                <div
+                                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-surface/90 backdrop-blur px-2 sm:px-2.5 py-1 font-label-uppercase text-[9px] sm:text-label-uppercase text-primary">
+                                    Stok: 220 pcs
+                                </div>
+                            </div>
+                            <div class="p-3 sm:p-space-md space-y-space-xs">
+                                <div
+                                    class="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-space-xs">
+                                    <div>
+                                        <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                            Atasan / Inner</p>
+                                        <h3
+                                            class="font-headline-sm text-[15px] sm:text-headline-sm text-primary leading-snug">
+                                            Minimalist Mockneck
+                                            Top</h3>
+                                    </div>
+                                    <span
+                                        class="inline-block px-2 py-0.5 bg-surface-container font-label-uppercase text-label-uppercase text-primary">
+                                        MOQ: 15 pcs
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Ribbed Supima Blend Stretch. Rajutan mikro tahan pudar, kerah tegak bersih
+                                    menyempurnakan layering jas/outer.
+                                </p>
+                                <div class="bg-surface-container-low p-space-xs space-y-1">
+                                    <div
+                                        class="flex flex-wrap justify-between items-baseline gap-x-2 font-body-sm text-[12px] sm:text-body-sm">
+                                        <span class="text-secondary">Harga Retail Rekomendasi:</span>
+                                        <span class="line-through text-on-surface-variant font-medium">Rp 149.000</span>
+                                    </div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span
+                                            class="font-label-uppercase text-label-uppercase text-primary font-bold">Harga
+                                            Grosir B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary">Rp 88.000<span
+                                                class="text-body-sm font-normal text-secondary">/pcs</span></span>
+                                    </div>
+                                    <div
+                                        class="pt-1 flex flex-wrap items-center justify-between gap-x-2 text-[12px] sm:text-body-sm font-medium text-primary">
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-[15px]">savings</span> Potensi
+                                            Margin:</span>
+                                        <span>~40.9% (Rp 61.000/pcs)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0 sm:p-space-md sm:pt-0 space-y-space-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="font-label-uppercase text-label-uppercase text-secondary uppercase">Jumlah
+                                    Pesanan:</span>
+                                <div class="flex items-center bg-surface-container">
+                                    <button
+                                        class="qty-btn-minus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="mockneck-top">-</button>
+                                    <input
+                                        class="w-12 text-center bg-transparent font-body-sm text-body-sm font-medium focus:outline-none py-1"
+                                        id="qty-mockneck-top" min="15" step="1" type="number" value="15" />
+                                    <button
+                                        class="qty-btn-plus w-8 h-8 flex items-center justify-center font-button-text hover:bg-surface-variant transition-colors"
+                                        data-target="mockneck-top">+</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-xs pt-1">
+                                <button
+                                    class="btn-add-b2b flex-1 bg-primary text-on-primary py-3 px-2 sm:px-4 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+                                    data-id="mockneck-top">
+                                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Tambah
+                                    Pesanan
+                                </button>
+                                <button
+                                    class="p-3 bg-surface-container hover:bg-surface-variant text-primary transition-colors flex items-center justify-center"
+                                    title="Unduh Lookbook Kit Foto &amp; Deskripsi">
+                                    <span class="material-symbols-outlined text-[18px]">download</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive B2B Order Simulator & WhatsApp Checkout Hub -->
+            <section
+                class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface-container-high"
+                id="order-simulator">
+                <div class="max-w-6xl mx-auto bg-surface-container-lowest p-space-md md:p-space-xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+                        <!-- Left: Draft Table / Selected Items -->
+                        <div class="lg:col-span-7 space-y-space-md">
+                            <div class="flex items-center justify-between pb-space-xs">
+                                <div>
+                                    <p class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                        Alokasi Pembelian</p>
+                                    <h2
+                                        class="font-headline-md text-headline-md text-primary tracking-tight font-normal">
+                                        Daftar Seri B2B Terpilih</h2>
+                                </div>
+                                <button
+                                    class="font-button-text text-button-text uppercase text-secondary hover:text-primary transition-colors"
+                                    id="btnClearCart">
+                                    Reset Semua
+                                </button>
+                            </div>
+                            <div class="space-y-space-xs min-h-[160px]" id="cartItemsList">
+                                <!-- Items injected by script -->
+                            </div>
+                            <!-- Extra Tier Incentive Notification -->
+                            <div class="p-space-sm bg-surface-container-low flex items-start gap-space-sm">
+                                <span
+                                    class="material-symbols-outlined text-[20px] text-primary mt-0.5">local_shipping</span>
+                                <div class="space-y-1">
+                                    <div class="font-label-uppercase text-label-uppercase text-primary font-bold">
+                                        Fasilitas Subsidi Ekspedisi B2B</div>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                        Pemesanan di atas 36 pcs mendapatkan subsidi ongkos kirim kargo darat/laut
+                                        sebesar 50% ke seluruh kota di Pulau Jawa, Bali, dan Sumatera.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right: Commercial Profit Metrics & Instant WhatsApp Action -->
+                        <div
+                            class="lg:col-span-5 bg-surface-container-low p-space-md md:p-space-lg flex flex-col justify-between space-y-space-md">
+                            <div class="space-y-space-sm">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="font-label-uppercase text-label-uppercase text-secondary uppercase">Kalkulasi
+                                        Finansial</span>
+                                    <span
+                                        class="font-label-uppercase text-label-uppercase px-2 py-0.5 bg-primary text-on-primary uppercase"
+                                        id="moqStatusBadge">
+                                        Siap Validasi
+                                    </span>
+                                </div>
+                                <!-- Financial Summary Metrics -->
+                                <div class="space-y-space-xs pt-space-xs">
+                                    <div
+                                        class="flex justify-between items-center text-body-md font-body-md text-on-surface-variant">
+                                        <span>Total Kuantitas:</span>
+                                        <span class="font-medium text-primary" id="summaryTotalQty">0 pcs</span>
+                                    </div>
+                                    <div
+                                        class="flex justify-between items-center text-body-md font-body-md text-on-surface-variant">
+                                        <span>Total Estimasi Investasi B2B:</span>
+                                        <span class="font-headline-sm text-headline-sm text-primary"
+                                            id="summaryTotalB2b">Rp 0</span>
+                                    </div>
+                                    <div
+                                        class="flex justify-between items-center text-body-sm font-body-sm text-secondary">
+                                        <span>Estimasi Omzet Retail (Gross):</span>
+                                        <span class="font-medium text-primary" id="summaryTotalRetail">Rp 0</span>
+                                    </div>
+                                </div>
+                                <!-- Profit Projection Plinth -->
+                                <div class="bg-surface-container-lowest p-space-sm space-y-1">
+                                    <div class="font-label-uppercase text-label-uppercase text-secondary uppercase">
+                                        Estimasi Laba Kotor Usaha</div>
+                                    <div class="flex items-baseline justify-between">
+                                        <span class="font-headline-sm text-headline-sm text-primary font-medium"
+                                            id="summaryProfit">Rp 0</span>
+                                        <span class="font-label-uppercase text-label-uppercase text-primary font-bold"
+                                            id="summaryMarginPct">~0%</span>
+                                    </div>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                                        Kalkulasi didasarkan pada harga eceran tertinggi yang disarankan ETIESTA.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Checkout & Action Buttons -->
+                            <div class="space-y-space-xs pt-space-sm">
+                                <button
+                                    class="w-full bg-primary text-on-primary py-4 px-space-md font-button-text text-button-text uppercase tracking-[0.18em] hover:bg-primary-container transition-all flex items-center justify-center gap-2 group"
+                                    id="btnWhatsappCheckout">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                                    <span>Checkout Pesanan via WhatsApp</span>
+                                </button>
+                                <p class="font-body-sm text-body-sm text-center text-secondary">
+                                    Format draft order, kalkulasi kuantiti, &amp; estimasi kargo otomatis dirangkai
+                                    rapi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Reseller Partnership Workflow (3 Langkah Kemitraan) -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface">
+                <div class="text-center max-w-2xl mx-auto mb-space-lg space-y-space-xs">
+                    <p class="font-label-uppercase text-label-uppercase tracking-[0.2em] text-secondary uppercase">Alur
+                        Kemitraan Resmi</p>
+                    <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-normal">Tiga Langkah
+                        Kolaborasi</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Proses kemitraan yang dirancang ringkas, aman, dan tanpa birokrasi berbelit.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-3 sm:gap-gutter">
+                    <!-- Step 1 -->
+                    <div class="bg-surface-container-low p-space-md space-y-space-sm relative">
+                        <div
+                            class="font-display-hero text-headline-lg text-surface-variant font-normal leading-none select-none">
+                            01</div>
+                        <div class="space-y-space-xs">
+                            <div class="font-headline-sm text-headline-sm text-primary">Pilih Koleksi &amp; Seri</div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Eksplorasi katalog di atas, tentukan seri produk yang sesuai dengan demografi pasar
+                                butik Anda, dan tentukan kuantitas awal (min. 8–15 pcs).
+                            </p>
+                        </div>
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest pt-space-xs">
+                            TAHAP 1: SELEKSI</div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-surface-container-low p-space-md space-y-space-sm relative">
+                        <div
+                            class="font-display-hero text-headline-lg text-surface-variant font-normal leading-none select-none">
+                            02</div>
+                        <div class="space-y-space-xs">
+                            <div class="font-headline-sm text-headline-sm text-primary">Konfirmasi Faktur &amp; Kargo
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Tim konsultan B2B kami memvalidasi kuota stok real-time, menerbitkan Proforma Invoice
+                                resmi, dan mengoordinasikan opsi ekspedisi kargo terbaik.
+                            </p>
+                        </div>
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest pt-space-xs">
+                            TAHAP 2: INVOICING</div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="col-span-2 bg-surface-container-low p-space-md space-y-space-sm relative">
+                        <div
+                            class="font-display-hero text-headline-lg text-surface-variant font-normal leading-none select-none">
+                            03</div>
+                        <div class="space-y-space-xs">
+                            <div class="font-headline-sm text-headline-sm text-primary">Pengiriman &amp; Aset Promosi
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Pesanan diasuransikan penuh dan dikirim langsung. Anda langsung mendapatkan tautan akses
+                                folder aset visual resolusi tinggi (Lookbook Kit).
+                            </p>
+                        </div>
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest pt-space-xs">
+                            TAHAP 3: FULFILLMENT</div>
+                    </div>
+                </div>
+                <!-- Private Label & Corporate Order Callout Plinth -->
+                <div
+                    class="mt-space-lg bg-surface-container-lowest p-space-md md:p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+                    <div class="space-y-space-xs max-w-2xl">
+                        <div
+                            class="inline-flex items-center gap-2 font-label-uppercase text-label-uppercase text-primary font-bold">
+                            <span class="material-symbols-outlined text-[18px]">storefront</span>
+                            LAYANAN KHUSUS PRIVATE LABEL &amp; SERAGAM KORPORAT
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Memerlukan pesanan custom di atas 100
+                            pcs?</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                            ETIESTA Atelier melayani penjahitan label bordir merek Anda sendiri (woven label),
+                            modifikasi pola, hingga produksi seragam korporat eksklusif dengan tenggat waktu terjamin.
+                        </p>
+                    </div>
+                    <a class="shrink-0 bg-primary text-on-primary px-space-md py-3.5 font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-colors flex items-center gap-2"
+                        href="https://wa.me/6285885332703?text=Halo%20ETIESTA%2C%20saya%20tertarik%20konsultasi%20layanan%20Private%20Label%20%2F%20Custom%20Corporate%20di%20atas%20100%20pcs."
+                        rel="noopener noreferrer" target="_blank">
+                        <span>Hubungi Tim Atelier</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+            </section>
+            <!-- Editorial FAQ Section -->
+            <section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pb-space-xl bg-surface">
+                <div class="max-w-4xl mx-auto space-y-space-md">
+                    <div class="text-center space-y-space-xs">
+                        <p class="font-label-uppercase text-label-uppercase tracking-widest text-secondary uppercase">
+                            Bantuan &amp; Panduan</p>
+                        <h2 class="font-headline-md text-headline-md text-primary tracking-tight font-normal">Pertanyaan
+                            Seputar B2B</h2>
+                    </div>
+                    <div class="space-y-space-xs" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item bg-surface-container-low p-space-md cursor-pointer transition-colors hover:bg-surface-variant/40"
+                            onclick="toggleFaq(this)">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-headline-sm text-subhead-editorial text-primary">Apakah ukuran (size)
+                                    bisa dicampur dalam 1 seri MOQ?</h4>
+                                <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
+                            </div>
+                            <div
+                                class="faq-content hidden pt-space-xs font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Ya, tentu. Untuk setiap MOQ seri yang ditentukan (misalnya 12 pcs), Anda bebas membagi
+                                rasio ukuran sesuai preferensi profil pelanggan Anda (contoh: 3x Size S, 4x Size M, 4x
+                                Size L, 1x Size XL).
+                            </div>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="faq-item bg-surface-container-low p-space-md cursor-pointer transition-colors hover:bg-surface-variant/40"
+                            onclick="toggleFaq(this)">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-headline-sm text-subhead-editorial text-primary">Bagaimana hak cipta
+                                    penggunaan foto editorial lookbook untuk pemasaran retail saya?</h4>
+                                <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
+                            </div>
+                            <div
+                                class="faq-content hidden pt-space-xs font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Seluruh mitra B2B ETIESTA yang terverifikasi mendapatkan lisensi penggunaan materi
+                                visual berkualitas tinggi (foto studio, reel video promosi, dan copy deskripsi) untuk
+                                digunakan secara bebas di Instagram toko, marketplace butik, dan katalog digital tanpa
+                                royalti tambahan.
+                            </div>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="faq-item bg-surface-container-low p-space-md cursor-pointer transition-colors hover:bg-surface-variant/40"
+                            onclick="toggleFaq(this)">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-headline-sm text-subhead-editorial text-primary">Bagaimana kebijakan
+                                    penukaran jika terdapat produk cacat (defect)?</h4>
+                                <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
+                            </div>
+                            <div
+                                class="faq-content hidden pt-space-xs font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                ETIESTA menerapkan garansi penggantian 100% 1-to-1 replacement untuk barang defect
+                                pabrik yang dilaporkan dalam 7 hari kerja sejak barang tiba di gudang Anda, dengan
+                                seluruh biaya ongkos kirim retur ditanggung oleh pihak kami.
+                            </div>
+                        </div>
+                        <!-- FAQ 4 -->
+                        <div class="faq-item bg-surface-container-low p-space-md cursor-pointer transition-colors hover:bg-surface-variant/40"
+                            onclick="toggleFaq(this)">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-headline-sm text-subhead-editorial text-primary">Opsi pengiriman kargo
+                                    apa saja yang didukung?</h4>
+                                <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
+                            </div>
+                            <div
+                                class="faq-content hidden pt-space-xs font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Kami bermitra dengan JNE Trucking (JTR), Baraka Sarana Tama, Indah Logistik Kargo,
+                                Sentral Cargo, serta ekspedisi port-to-port udara untuk pengiriman antar pulau mendesak.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            // Dedicated WhatsApp Number Configuration
+            const WHATSAPP_NUMBER = "6285885332703";
+
+            // Products Database
+            const b2bDatabase = {
+                "tee-boxy": {
+                    id: "tee-boxy",
+                    name: "Oversized Boxy Tee",
+                    category: "atasan",
+                    moq: 12,
+                    b2bPrice: 78000,
+                    retailPrice: 129000,
+                    stock: 180
+                },
+                "linen-blazer": {
+                    id: "linen-blazer",
+                    name: "Tailored Linen Blazer",
+                    category: "outerwear",
+                    moq: 8,
+                    b2bPrice: 175000,
+                    retailPrice: 289000,
+                    stock: 95
+                },
+                "lounge-shirt": {
+                    id: "lounge-shirt",
+                    name: "Relaxed Linen Lounge Shirt",
+                    category: "atasan",
+                    moq: 12,
+                    b2bPrice: 108000,
+                    retailPrice: 179000,
+                    stock: 140
+                },
+                "pleated-trousers": {
+                    id: "pleated-trousers",
+                    name: "Pleated Wide-Leg Trousers",
+                    category: "bawahan",
+                    moq: 10,
+                    b2bPrice: 132000,
+                    retailPrice: 219000,
+                    stock: 110
+                },
+                "poplin-dress": {
+                    id: "poplin-dress",
+                    name: "Structured Poplin Shirt Dress",
+                    category: "dress",
+                    moq: 10,
+                    b2bPrice: 158000,
+                    retailPrice: 259000,
+                    stock: 75
+                },
+                "mockneck-top": {
+                    id: "mockneck-top",
+                    name: "Minimalist Mockneck Layering Top",
+                    category: "atasan",
+                    moq: 15,
+                    b2bPrice: 88000,
+                    retailPrice: 149000,
+                    stock: 220
+                }
+            };
+
+            // State
+            let cartState = {
+                "tee-boxy": 12,
+                "linen-blazer": 8
+            };
+
+            // Formatting helpers
+            const formatIDR = (val) => "Rp " + val.toLocaleString("id-ID");
+
+            // Quantity button controls
+            document.querySelectorAll(".qty-btn-plus").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const input = document.getElementById("qty-" + targetId);
+                    if (input) {
+                        input.value = parseInt(input.value || "0") + 1;
+                    }
+                });
+            });
+
+            document.querySelectorAll(".qty-btn-minus").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute("data-target");
+                    const input = document.getElementById("qty-" + targetId);
+                    if (input) {
+                        const prod = b2bDatabase[targetId];
+                        const minMoq = prod ? prod.moq : 1;
+                        const current = parseInt(input.value || minMoq);
+                        if (current > minMoq) {
+                            input.value = current - 1;
+                        }
+                    }
+                });
+            });
+
+            // Add to B2B cart action
+            document.querySelectorAll(".btn-add-b2b").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const prodId = btn.getAttribute("data-id");
+                    const input = document.getElementById("qty-" + prodId);
+                    const qty = input ? parseInt(input.value) : (b2bDatabase[prodId] ? b2bDatabase[prodId].moq : 10);
+                    cartState[prodId] = qty;
+                    renderCart();
+                    const simSection = document.getElementById("order-simulator");
+                    if (simSection) {
+                        simSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                });
+            });
+
+            // Clear Cart
+            document.getElementById("btnClearCart").addEventListener("click", () => {
+                cartState = {};
+                renderCart();
+            });
+
+            // Render Order Simulator
+            function renderCart() {
+                const listContainer = document.getElementById("cartItemsList");
+                listContainer.innerHTML = "";
+
+                const keys = Object.keys(cartState);
+
+                if (keys.length === 0) {
+                    listContainer.innerHTML = `
+        <div class="p-space-lg text-center bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+          <span class="material-symbols-outlined text-[32px] text-secondary mb-1">shopping_bag</span>
+          <p>Belum ada seri B2B yang dipilih ke draft pesanan.</p>
+          <p class="text-xs text-secondary mt-1">Silakan pilih produk dari katalog di atas untuk menghitung proyeksi margin.</p>
+        </div>
+      `;
+                    updateSummary(0, 0, 0);
+                    return;
+                }
+
+                let totalQty = 0;
+                let totalB2b = 0;
+                let totalRetail = 0;
+
+                keys.forEach((key) => {
+                    const prod = b2bDatabase[key];
+                    if (!prod) return;
+                    const qty = cartState[key];
+                    const subtotalB2b = qty * prod.b2bPrice;
+                    const subtotalRetail = qty * prod.retailPrice;
+
+                    totalQty += qty;
+                    totalB2b += subtotalB2b;
+                    totalRetail += subtotalRetail;
+
+                    const row = document.createElement("div");
+                    row.className = "p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs";
+                    row.innerHTML = `
+        <div class="space-y-0.5">
+          <div class="font-headline-sm text-subhead-editorial text-primary font-medium">${prod.name}</div>
+          <div class="font-body-sm text-body-sm text-secondary">
+            MOQ: ${prod.moq} pcs &bull; B2B: ${formatIDR(prod.b2bPrice)}/pcs &bull; Retail: ${formatIDR(prod.retailPrice)}
+          </div>
+        </div>
+        <div class="flex items-center gap-space-sm self-end sm:self-center">
+          <div class="flex items-center bg-surface-container-lowest">
+            <button class="w-7 h-7 flex items-center justify-center font-button-text hover:bg-surface-variant" onclick="adjustCartQty('${key}', -1)">-</button>
+            <span class="w-10 text-center font-body-sm text-body-sm font-medium">${qty} pcs</span>
+            <button class="w-7 h-7 flex items-center justify-center font-button-text hover:bg-surface-variant" onclick="adjustCartQty('${key}', 1)">+</button>
+          </div>
+          <div class="text-right min-w-[100px]">
+            <div class="font-body-sm text-body-sm text-primary font-semibold">${formatIDR(subtotalB2b)}</div>
+          </div>
+          <button class="text-secondary hover:text-error transition-colors p-1" onclick="removeFromCart('${key}')" title="Hapus">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+      `;
+                    listContainer.appendChild(row);
+                });
+
+                updateSummary(totalQty, totalB2b, totalRetail);
+            }
+
+            window.adjustCartQty = function (key, delta) {
+                const prod = b2bDatabase[key];
+                if (!prod) return;
+                const current = cartState[key] || prod.moq;
+                const newQty = current + delta;
+                if (newQty < prod.moq) {
+                    if (confirm(`Minimum order untuk ${prod.name} adalah ${prod.moq} pcs. Ingin menghapus dari daftar pesanan?`)) {
+                        delete cartState[key];
+                    }
+                } else {
+                    cartState[key] = newQty;
+                }
+                renderCart();
+            };
+
+            window.removeFromCart = function (key) {
+                delete cartState[key];
+                renderCart();
+            };
+
+            function updateSummary(totalQty, totalB2b, totalRetail) {
+                const profit = totalRetail - totalB2b;
+                const marginPct = totalRetail > 0 ? ((profit / totalRetail) * 100).toFixed(1) : 0;
+
+                document.getElementById("summaryTotalQty").textContent = `${totalQty} pcs`;
+                document.getElementById("summaryTotalB2b").textContent = formatIDR(totalB2b);
+                document.getElementById("summaryTotalRetail").textContent = formatIDR(totalRetail);
+                document.getElementById("summaryProfit").textContent = formatIDR(profit);
+                document.getElementById("summaryMarginPct").textContent = `~${marginPct}% Margin`;
+
+                const statusBadge = document.getElementById("moqStatusBadge");
+                if (totalQty > 0) {
+                    statusBadge.textContent = "MOQ Terpenuhi";
+                    statusBadge.className = "font-label-uppercase text-label-uppercase px-2 py-0.5 bg-primary text-on-primary uppercase flex items-center gap-1";
+                    statusBadge.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span> Valid Siap Kirim`;
+                } else {
+                    statusBadge.textContent = "Draf Kosong";
+                    statusBadge.className = "font-label-uppercase text-label-uppercase px-2 py-0.5 bg-surface-variant text-on-surface-variant uppercase";
+                }
+            }
+
+            // WhatsApp Checkout Generator
+            document.getElementById("btnWhatsappCheckout").addEventListener("click", () => {
+                const keys = Object.keys(cartState);
+                if (keys.length === 0) {
+                    alert("Silakan masukkan minimal satu seri produk B2B ke dalam daftar pesanan sebelum checkout.");
+                    return;
+                }
+
+                let itemsText = "";
+                let totalQty = 0;
+                let totalB2b = 0;
+                let totalRetail = 0;
+
+                keys.forEach((key, index) => {
+                    const prod = b2bDatabase[key];
+                    const qty = cartState[key];
+                    const subtotal = qty * prod.b2bPrice;
+                    totalQty += qty;
+                    totalB2b += subtotal;
+                    totalRetail += qty * prod.retailPrice;
+
+                    itemsText += `${index + 1}. ${prod.name} (${qty} pcs) - Harga B2B: ${formatIDR(prod.b2bPrice)}/pcs - Subtotal: ${formatIDR(subtotal)}\n`;
+                });
+
+                const profit = totalRetail - totalB2b;
+
+                const message = `Halo ETIESTA, saya ingin melakukan pemesanan kemitraan Pesanan Bisnis:
+
+${itemsText}
+Total Kuantitas: ${totalQty} pcs
+Total Estimasi Investasi B2B: ${formatIDR(totalB2b)}
+Estimasi Potensi Omzet Retail: ${formatIDR(totalRetail)} (Proyeksi Laba: ${formatIDR(profit)})
+
+Mohon informasi ketersediaan stok bulk gudang, penerbitan invoice resmi, dan opsi pengiriman kargo. Terima kasih.`;
+
+                const encoded = encodeURIComponent(message);
+                const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+                window.open(waUrl, "_blank");
+            });
+
+            // Filter & Sorting Logic
+            const catButtons = document.querySelectorAll(".b2b-cat-btn");
+            const moqFilter = document.getElementById("moqFilter");
+            const sortSelect = document.getElementById("sortSelect");
+
+            catButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    catButtons.forEach((b) => {
+                        b.classList.remove("active", "bg-primary", "text-on-primary");
+                        b.classList.add("bg-surface-container", "text-on-surface");
+                    });
+                    btn.classList.add("active", "bg-primary", "text-on-primary");
+                    btn.classList.remove("bg-surface-container", "text-on-surface");
+                    applyFilters();
+                });
+            });
+
+            moqFilter.addEventListener("change", applyFilters);
+            sortSelect.addEventListener("change", applyFilters);
+
+            function applyFilters() {
+                const activeCatBtn = document.querySelector(".b2b-cat-btn.active");
+                const activeCat = activeCatBtn ? activeCatBtn.getAttribute("data-cat") : "all";
+                const selectedMoq = moqFilter.value;
+                const sortVal = sortSelect.value;
+
+                const cards = Array.from(document.querySelectorAll(".product-item"));
+
+                cards.forEach((card) => {
+                    const cat = card.getAttribute("data-category");
+                    const moq = parseInt(card.getAttribute("data-moq"));
+
+                    let showCat = activeCat === "all" || cat === activeCat;
+                    let showMoq = true;
+
+                    if (selectedMoq !== "all") {
+                        showMoq = moq <= parseInt(selectedMoq);
+                    }
+
+                    if (showCat && showMoq) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+                // Sorting
+                const grid = document.getElementById("productGrid");
+                const visibleCards = cards.filter((c) => c.style.display !== "none");
+
+                visibleCards.sort((a, b) => {
+                    const aPrice = parseInt(a.getAttribute("data-b2b-price"));
+                    const bPrice = parseInt(b.getAttribute("data-b2b-price"));
+                    const aMoq = parseInt(a.getAttribute("data-moq"));
+                    const bMoq = parseInt(b.getAttribute("data-moq"));
+                    const aRetail = parseInt(a.getAttribute("data-retail-price"));
+                    const bRetail = parseInt(b.getAttribute("data-retail-price"));
+                    const aMargin = (aRetail - aPrice) / aRetail;
+                    const bMargin = (bRetail - bPrice) / bRetail;
+
+                    if (sortVal === "moq-asc") return aMoq - bMoq;
+                    if (sortVal === "margin-desc") return bMargin - aMargin;
+                    if (sortVal === "price-asc") return aPrice - bPrice;
+                    return 0; // Default popular
+                });
+
+                visibleCards.forEach((c) => grid.appendChild(c));
+            }
+
+            // FAQ Accordion Toggle
+            window.toggleFaq = function (el) {
+                const content = el.querySelector(".faq-content");
+                const icon = el.querySelector(".faq-icon");
+                const isHidden = content.classList.contains("hidden");
+
+                // Close others
+                document.querySelectorAll(".faq-content").forEach((c) => c.classList.add("hidden"));
+                document.querySelectorAll(".faq-icon").forEach((i) => (i.textContent = "expand_more"));
+
+                if (isHidden) {
+                    content.classList.remove("hidden");
+                    icon.textContent = "expand_less";
+                }
+            };
+
+            // Initial render
+            renderCart();
+        </script>
+    </main>
+    <footer
+        class="w-full bg-surface-container-lowest border-t border-surface-container-highest pt-space-xl pb-space-lg">
+        <div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl">
+                <div class="md:col-span-5 space-y-space-sm">
+                    <div class="font-headline-md text-headline-md text-primary tracking-tight">ETIESTA</div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Dari Kriya Unik untuk Fashion
+                        Berkelanjutan.</p>
+                </div>
+                <div class="md:col-span-4 grid grid-cols-2 gap-space-md">
+                    <div class="space-y-space-xs">
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                            Navigasi</div>
+                        <ul class="space-y-2">
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="beranda" href="beranda.html">Beranda</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="koleksi" href="koleksi.html">Koleksi</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="pesanan-bisnis" href="pesananbisnis.html">Pesanan Bisnis</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="keranjang" href="tasbelanja.html">Keranjang</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-space-xs">
+                        <div
+                            class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                            Informasi</div>
+                        <ul class="space-y-2">
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="tentang" href="tentangkami.html">Tentang ETIESTA</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="kontak" href="tentangkami.html">Kontak</a></li>
+                            <li class="list-none"><a
+                                    class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                                    data-path="faq" href="pesananbisnis.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:col-span-3 space-y-space-xs">
+                    <div
+                        class="font-label-uppercase text-label-uppercase text-secondary tracking-widest uppercase mb-space-xs">
+                        Koneksi</div>
+                    <div class="flex items-center gap-space-sm pt-1"><a aria-label="Instagram @byetiesta.id"
+                            class="p-2 border border-surface-variant hover:border-primary text-on-surface hover:text-primary transition-colors flex items-center justify-center"
+                            href="https://www.instagram.com/byetiesta.id/" target="_blank" rel="noopener"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                            </svg></a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                            href="https://www.instagram.com/byetiesta.id/" target="_blank"
+                            rel="noopener">@byetiesta.id</a></div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant pt-2">Workshop: Tambun Selatan, Bekasi
+                    </p>
+                </div>
+            </div>
+            <div
+                class="pt-space-md border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-space-sm">
+                <div class="font-body-sm text-body-sm text-on-surface-variant">© 2026 ETIESTA by Eti Yuniarti. All
+                    Rights Reserved.
+                </div>
+                <div
+                    class="font-label-uppercase text-label-uppercase text-on-surface-variant flex items-center gap-space-md">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a
+                        class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
